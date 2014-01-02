@@ -16,6 +16,8 @@ NeoBundleLazy 'vim-ruby/vim-ruby'
 NeoBundleLazy 'skwp/vim-rspec'
 NeoBundleLazy 'ruby-matchit'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'tpope/vim-dispatch'
+NeoBundle 'thoughbot/vim-rspec'
 
 filetype plugin indent on
 
@@ -40,3 +42,5 @@ if has('mouse')
 endif
 syntax on
 hi Comment ctermfg=69
+
+let g:rspec_command = "Dispatch rspec {spec}"
