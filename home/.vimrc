@@ -27,6 +27,7 @@ set ambiwidth=double
 set autoindent
 set backspace=2
 set clipboard+=unnamed
+set clipboard+=autoselect
 set expandtab
 set hlsearch
 set ignorecase
