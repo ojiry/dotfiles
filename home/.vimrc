@@ -12,12 +12,14 @@ NeoBundleLazy 'Shougo/neocomplcache'
 NeoBundleLazy 'Shougo/neosnippet'
 NeoBundle 'Shougo/neocomplcache-rsense'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-markdown'
 NeoBundleLazy 'vim-ruby/vim-ruby'
 NeoBundleLazy 'skwp/vim-rspec'
 NeoBundleLazy 'ruby-matchit'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'thoughbot/vim-rspec'
+NeoBundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on
 
@@ -27,7 +29,7 @@ set ambiwidth=double
 set autoindent
 set backspace=2
 set clipboard+=unnamed
-set clipboard+=autoselect
+" set clipboard+=autoselect
 set expandtab
 set hlsearch
 set ignorecase
@@ -44,4 +46,4 @@ endif
 syntax on
 hi Comment ctermfg=69
 
-let g:rspec_command = "Dispatch rspec {spec}"
+let g:rspec_command = "Dispatch bundle exec rspec {spec}"
