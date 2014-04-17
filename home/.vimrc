@@ -1,16 +1,19 @@
-set nocompatible
-
 if has('vim_starting')
+  set nocompatible
+
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
-call neobundle#rc(expand('~/.vim/bundle/'))
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'kannokanno/previm'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/emmet-vim'
+NeoBundle 'plasticboy/vim-markdown'
 NeoBundleLazy 'ruby-matchit'
-NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundleLazy 'Shougo/neocomplcache'
 NeoBundleLazy 'Shougo/neosnippet'
@@ -20,9 +23,11 @@ NeoBundleLazy 'skwp/vim-rspec'
 NeoBundle 'thoughbot/vim-rspec'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'tpope/vim-markdown'
 NeoBundle 'tpope/vim-rails'
+NeoBundle 'tyru/open-browser.vim'
 NeoBundleLazy 'vim-ruby/vim-ruby'
+
+call neobundle#end()
 
 filetype plugin indent on
 

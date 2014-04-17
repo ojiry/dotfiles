@@ -8,6 +8,3 @@ export EC2_HOME="/usr/local/Cellar/ec2-api-tools/1.6.12.0/libexec"
 if [ -f ~/.bashrc ] ; then
   . ~/.bashrc
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/ryoji/.gvm/bin/gvm-init.sh" ]] && source "/Users/ryoji/.gvm/bin/gvm-init.sh"

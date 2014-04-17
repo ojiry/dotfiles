@@ -1,7 +1,7 @@
-PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
-
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
+
+PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 
 # append to the history file, don't overwrite it
 shopt -s histappend
@@ -31,13 +31,3 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
-
-# The following three lines have been added by UDB DB2.
-if [ -f /Users/ryoji/sqllib/db2profile ]; then
-    . /Users/ryoji/sqllib/db2profile
-fi
-
-source /usr/local/bin/virtualenvwrapper.sh
-
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/ryoji/.gvm/bin/gvm-init.sh" ]] && source "/Users/ryoji/.gvm/bin/gvm-init.sh"
