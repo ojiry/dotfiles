@@ -11,6 +11,7 @@ HISTSIZE=10000
 HISTFILESIZE=10000
 
 eval "$(rbenv init -)"
+eval "$(direnv hook $0)"
 
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
