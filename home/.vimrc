@@ -20,6 +20,7 @@ NeoBundleLazy 'Shougo/neosnippet'
 NeoBundle 'Shougo/neocomplcache-rsense'
 NeoBundle 'Shougo/unite.vim'
 NeoBundleLazy 'skwp/vim-rspec'
+NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thoughbot/vim-rspec'
 NeoBundle 'tpope/vim-dispatch'
 NeoBundle 'tpope/vim-fugitive'
@@ -64,3 +65,13 @@ let g:lightline = {
 " unite
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
+
+" marked
+let g:quickrun_config = {}
+let g:quickrun_config.markdown = {
+      \ 'outputter' : 'null',
+      \ 'command'   : 'open',
+      \ 'cmdopt'    : '-a',
+      \ 'args'      : 'Marked',
+      \ 'exec'      : '%c %o %a %s',
+      \ }
