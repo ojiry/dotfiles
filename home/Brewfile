@@ -3,3 +3,5 @@ upgrade
 
 tap caskroom/cask || true
 install brew-cask
+
+cleanup
