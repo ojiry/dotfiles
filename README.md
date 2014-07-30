@@ -2,15 +2,8 @@
 
 ## Installation
 
-### Install homesick gem
+### Run below script.
 
 ```bash
-$ gem install homesick
-```
-
-### Using homesick
-
-```bash
-$ homesick clone git@github.com:ryog/dotfiles.git
-$ homesick symlink dotfiles
+$ curl https://raw.githubusercontent.com/ryog/dotfiles/master/bin/setup.sh | sh
 ```
