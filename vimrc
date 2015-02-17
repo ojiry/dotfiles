@@ -14,6 +14,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundleLazy 'ruby-matchit'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/vimproc'
 NeoBundleLazy 'Shougo/neocomplcache'
 NeoBundleLazy 'Shougo/neosnippet'
@@ -87,3 +88,5 @@ if OSTYPE == "Darwin\n"
         \ 'exec'      : '%c %o %a %s',
         \ }
 endif
+
+let g:syntastic_ruby_checkers = ['rubocop']
