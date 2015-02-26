@@ -20,6 +20,7 @@ ln -vsf $DOTFILES_DIR/gitconfig ~/.gitconfig
 ln -vsf $DOTFILES_DIR/gitignore ~/.gitignore
 ln -vsf $DOTFILES_DIR/profile ~/.profile
 ln -vsf $DOTFILES_DIR/railsrc ~/.railsrc
+ln -vsf $DOTFILES_DIR/rubocop.yml ~/.rubocop.yml
 ln -vsf $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 ln -vsf $DOTFILES_DIR/vimrc ~/.vimrc
 echo "Done."
