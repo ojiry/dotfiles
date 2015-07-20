@@ -11,7 +11,7 @@ fi
 
 echo "Start fetch dotfiles..."
 mkdir -p $DOTFILES_DIR
-git clone https://github.com/ryog/dotfiles $DOTFILES_DIR
+git clone git@github.com:ryog/dotfiles.git $DOTFILES_DIR
 echo "Done."
 
 echo "Start symbolic link dotfiles..."
