@@ -1,5 +1,4 @@
 export EDITOR=vim
 
-if [ -f ~/.bashrc ] ; then
-  . ~/.bashrc
-fi
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local

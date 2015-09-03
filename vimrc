@@ -1,5 +1,9 @@
+if 0 | endif
+
 if has('vim_starting')
-  set nocompatible
+  if &compatible
+    set nocompatible
+  endif
 
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
@@ -11,11 +15,20 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kylef/apiblueprint.vim'
 NeoBundle 'mattn/emmet-vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundleLazy 'ruby-matchit'
 NeoBundle 'scrooloose/syntastic'
-NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 NeoBundleLazy 'Shougo/neocomplcache'
 NeoBundleLazy 'Shougo/neosnippet'
 NeoBundle 'Shougo/neocomplcache-rsense'
@@ -28,6 +41,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundleLazy 'vim-ruby/vim-ruby'
+NeoBundle 'fatih/vim-go'
 
 call neobundle#end()
 
@@ -64,6 +78,8 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
+let g:vim_markdown_folding_disabled=1
+
 " unite
 let g:unite_enable_start_insert=1
 let g:unite_source_history_yank_enable =1
@@ -75,6 +91,8 @@ au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vspli
 au FileType unite inoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
+au FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
 
 let OSTYPE = system('uname')
 
@@ -91,3 +109,7 @@ if OSTYPE == "Darwin\n"
 endif
 
 let g:syntastic_ruby_checkers = ['rubocop']
+
+if filereadable(expand($HOME.'/.vimrc.local'))
+  source $HOME/.vimrc.local
+endif

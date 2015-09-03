@@ -1,18 +1,16 @@
 [alias]
-  br = branch
-  ci = commit -v
-  co = checkout
-  d = diff
-  st = status -s
+    br = branch
+    ci = commit -v
+    co = checkout
+    d = diff
+    st = status -s
 [color]
-  ui = auto
-[user]
-  name = Ryoji Yoshioka
-  email = yoshioka.ryoji@gmail.com
-[github]
-  user = ryog
-[push]
-  default = tracking
+    ui = auto
 [core]
-  excludesfile = ~/.gitignore
-  editor = vim
+    editor = vim
+    excludesfile = ~/.gitignore
+[push]
+    default = tracking
+[user]
+    name = Ryoji Yoshioka
+    email = yoshioka.ryoji@gmail.com

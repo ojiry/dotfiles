@@ -48,3 +48,6 @@ DerivedData
 
 ## Ruby
 .ruby-version
+
+## Direnv
+.envrc

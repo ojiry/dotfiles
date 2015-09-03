@@ -15,10 +15,12 @@ git clone git@github.com:ryog/dotfiles.git $DOTFILES_DIR
 echo "Done."
 
 echo "Start symbolic link dotfiles..."
+ln -vsf $DOTFILES_DIR/bash_aliases ~/.bash_aliases
+ln -vsf $DOTFILES_DIR/bash_profile ~/.bash_profile
+ln -vsf $DOTFILES_DIR/bashrc ~/.bashrc
 ln -vsf $DOTFILES_DIR/gemrc ~/.gemrc
 ln -vsf $DOTFILES_DIR/gitconfig ~/.gitconfig
 ln -vsf $DOTFILES_DIR/gitignore ~/.gitignore
-ln -vsf $DOTFILES_DIR/profile ~/.profile
 ln -vsf $DOTFILES_DIR/railsrc ~/.railsrc
 ln -vsf $DOTFILES_DIR/rubocop.yml ~/.rubocop.yml
 ln -vsf $DOTFILES_DIR/tmux.conf ~/.tmux.conf
