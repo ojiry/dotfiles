@@ -1,4 +1,4 @@
-#! /usr/bin/bash
+#!/bin/bash
 
 DOTFILES_DIR=~/.dotfiles
 
@@ -12,6 +12,10 @@ fi
 echo "Start fetch dotfiles..."
 mkdir -p $DOTFILES_DIR
 git clone git@github.com:ryog/dotfiles.git $DOTFILES_DIR
+echo "Done."
+
+echo "Start symbolic link commands..."
+ln -vsf $DOTFILES_DIR/dotfile_commit.sh /usr/local/bin/dotfile_commit
 echo "Done."
 
 echo "Start symbolic link dotfiles..."

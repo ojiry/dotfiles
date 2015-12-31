@@ -23,4 +23,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+shopt -s autocd
+
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
