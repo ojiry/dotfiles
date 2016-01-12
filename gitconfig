@@ -1,9 +1,10 @@
 [alias]
-    br = branch
-    ci = commit -v
-    co = checkout
-    d = diff
-    st = status -s
+    br  = branch
+    ci  = commit -v
+    cie = commit --allow-empty
+    co  = checkout
+    d   = diff
+    st  = status -s
 [color]
     ui = auto
 [core]
