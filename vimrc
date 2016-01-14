@@ -1,10 +1,6 @@
 if 0 | endif
 
 if has('vim_starting')
-  if &compatible
-    set nocompatible
-  endif
-
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
@@ -59,7 +55,6 @@ set hlsearch
 set ignorecase
 set laststatus=2
 set nobackup
-set nocompatible
 set number
 set shiftwidth=2
 set smartcase
