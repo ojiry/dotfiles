@@ -29,6 +29,9 @@ ln -vsf $DOTFILES_DIR/railsrc ~/.railsrc
 ln -vsf $DOTFILES_DIR/rubocop.yml ~/.rubocop.yml
 ln -vsf $DOTFILES_DIR/tmux.conf ~/.tmux.conf
 ln -vsf $DOTFILES_DIR/vimrc ~/.vimrc
+mkdir ~/.config
+ln -s ~/.vim ~/.config/nvim
+ln -s ~/.vimrc ~/.config/nvim/init.vim
 echo "Done."
 
 echo "Start install NeoBundle"
