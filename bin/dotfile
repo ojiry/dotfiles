@@ -1,62 +1,47 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -e
 
-if [[ "$DEBUG" = "yes" ]]; then
+if [ "$1" = "--debug" ]; then
+  export DOTFILE_DEBUG=1
+  shift
+fi
+
+if [ -n "$DOTFILE_DEBUG" ]; then
+  export PS4='+ [${BASH_SOURCE##*/}:${LINENO}] '
   set -x
 fi
 
-readonly DOTFILES_DIR=~/.dotfiles
-cd $DOTFILES_DIR
-
-function usage() {
-cat <<_EOT_
-usage: dotfile <command>
-
-available commands are:
-   commit   Record changes to the repository.
-   push     Update remote refs along with associated objects
-   status   Show the working tree status
-_EOT_
+abort() {
+  { if [ "$#" -eq 0 ]; then cat -
+    else echo "dotfile: $*"
+    fi
+  } >&2
+  exit 1
 }
 
-function git_status_count() { git status -s | wc -l; }
-function git_status_file_name() { git status -s | awk '{print $2}'; }
+DOTFILES_DIR="${HOME}/.dotfiles"
+export DOTFILES_DIR
 
-function main() {
-  if [[ $# -ne 1 ]]; then
-    usage
-    exit 1
+shopt -u nullglob
+
+command="$1"
+case "$command" in
+"" )
+  { dotfile-help
+  } | abort
+  ;;
+-h | --help )
+  exec dotfile-help
+  ;;
+* )
+  command_path="$(command -v "dotfile-$command" || true)"
+  [ -n "$command_path" ] || abort "no such command \`$command'"
+
+  shift 1
+  if [ "$1" = --help ]; then
+    exec dotfile-help "$command"
+  else
+    exec "$command_path" "$@"
   fi
-
-  case $1 in
-    commit)
-      case git_status_count in
-        0)
-          echo "nothing to commit, working directory clean"
-          exit 1;
-          ;;
-        1)
-          git add -A
-          git commit -m "Update ${git_status_file_name}"
-          ;;
-        *)
-          git add -A
-          git commit -m "Update dotfiles"
-      esac
-      ;;
-    push)
-      git push origin master
-      ;;
-    status)
-      git status
-      ;;
-    help)
-      usage
-      exit 0
-      ;;
-    *)
-      usage
-      exit 1
-  esac
-}
-
-main "$@"
+  ;;
+esac

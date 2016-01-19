@@ -1,0 +1,33 @@
+
+
+function git_status_count() { git status -s | wc -l; }
+function git_status_file_name() { git status -s | awk '{print $2}'; }
+
+  commit)
+    case git_status_count in
+      "0")
+        echo "nothing to commit, working directory clean"
+        exit 1;
+        ;;
+      "1")
+        git add -A
+        git commit -m "Update ${git_status_file_name}"
+        ;;
+      *)
+        git add -A
+        git commit -m "Update dotfiles"
+    esac
+    ;;
+  push)
+    git push origin master
+    ;;
+  status)
+    git status
+    ;;
+  -h | --help )
+    usage
+    exit 0
+    ;;
+  *)
+    usage
+    exit 1
