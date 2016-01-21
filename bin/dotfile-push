@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+[ -n "$DOTFILE_DEBUG" ] && set -x
+
+cd "$DOTFILES_DIR"
+
+git push "$@"
