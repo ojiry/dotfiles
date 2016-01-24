@@ -18,6 +18,7 @@ echo "Start symbolic link dotfiles..."
 ln -vsf $DOTFILES_DIR/bash_aliases ~/.bash_aliases
 ln -vsf $DOTFILES_DIR/bash_profile ~/.bash_profile
 ln -vsf $DOTFILES_DIR/bashrc ~/.bashrc
+ln -vsf $DOTFILES_DIR/ctags ~/.ctags
 ln -vsf $DOTFILES_DIR/gemrc ~/.gemrc
 ln -vsf $DOTFILES_DIR/gitconfig ~/.gitconfig
 ln -vsf $DOTFILES_DIR/gitignore ~/.gitignore
