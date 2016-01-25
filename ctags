@@ -1,2 +1,4 @@
---append=yes
---recurse=yes
+--append
+--recurse
+--sort=yes
+--tag-relative
