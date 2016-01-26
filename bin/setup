@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -e
 
-readonly DOTFILES_DIR=~/.dotfiles
+DOTFILES_DIR="${HOME}/.dotfiles"
 
 if type git; then
   : # You have git command. No Problem
