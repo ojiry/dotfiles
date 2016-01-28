@@ -50,8 +50,10 @@ for file_name in ${file_names[@]}; do
   ln -vsf "${DOTFILES_DIR}/${file_name}" "${HOME}/.${file_name}"
 done
 
-ln -vsf "${DOTFILES_DIR}/vim" "${HOME}/.config/nvim"
-ln -vsf "${DOTFILES_DIR}/vimrc" "${HOME}/.config/nvim/init.vim"
+ln -vsf "${HOME}/.vim" "${HOME}/.config/nvim"
+ln -vsf "${HOME}/.vimrc" "${HOME}/.config/nvim/init.vim"
+
+exit 0;
 
 if [ -d "/usr/local/etc/bash_completion.d/" ]; then
   ln -vsf "${DOTFILES_DIR}/completions/dotfile-completion.bash" "/usr/local/etc/bash_completion.d/dotfile-completion.bash"
