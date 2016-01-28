@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-DOTFILES_DIR="${HOME}/.dotfiles"
+if [ ! -n "$DOTFILES_DIR" ]; then
+  DOTFILES_DIR="${HOME}/.dotfiles"
+fi
 
 if type git; then
   : # You have git command. No Problem
