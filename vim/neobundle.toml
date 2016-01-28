@@ -1,0 +1,7 @@
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+  [plugins.build]
+  mac = 'make -f make_mac.mak'
+  unix = 'make -f make_unix.mak'
