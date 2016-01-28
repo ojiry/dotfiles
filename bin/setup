@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 set -e
 
-if [ ! -n "$DOTFILES_DIR" ]; then
-  DOTFILES_DIR="${HOME}/.dotfiles"
-fi
-
 if type git; then
   : # You have git command. No Problem
 else
   echo "Please install git command!"
   exit 1;
+fi
+
+if [ ! -n "$DOTFILES_DIR" ]; then
+  DOTFILES_DIR="${HOME}/.dotfiles"
 fi
 
 echo ""
@@ -29,20 +29,27 @@ echo "Start symbolic link dotfiles..."
 [ ! -d "${HOME}/.config" ] && mkdir -p "${HOME}/config"
 [ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"
 
-ln -vsf "${DOTFILES_DIR}/bash_aliases" "${HOME}/.bash_aliases"
-ln -vsf "${DOTFILES_DIR}/bash_profile" "${HOME}/.bash_profile"
-ln -vsf "${DOTFILES_DIR}/bashrc" "${HOME}/.bashrc"
-ln -vsf "${DOTFILES_DIR}/ctags" "${HOME}/.ctags"
-ln -vsf "${DOTFILES_DIR}/gemrc" "${HOME}/.gemrc"
-ln -vsf "${DOTFILES_DIR}/gitconfig" "${HOME}/.gitconfig"
-ln -vsf "${DOTFILES_DIR}/gitignore" "${HOME}/.gitignore"
-ln -vsf "${DOTFILES_DIR}/railsrc" "${HOME}/.railsrc"
-ln -vsf "${DOTFILES_DIR}/rubocop.yml" "${HOME}/.rubocop.yml"
-ln -vsf "${DOTFILES_DIR}/tmux.conf" "${HOME}/.tmux.conf"
-ln -vsf "${DOTFILES_DIR}/vimrc" "${HOME}/.vimrc"
-ln -vsf "${DOTFILES_DIR}/vim/neobundle.toml" "${HOME}/.vim/neobundle.toml"
-ln -vsf "${DOTFILES_DIR}/vim/neobundlelazy.toml" "${HOME}/.vim/neobundlelazy.toml"
-ln -vsf "${DOTFILES_DIR}/vim/plugins.rc.vim" "${HOME}/.vim/plugins.rc.vim"
+file_names=(
+  bash_aliases
+  bash_profile
+  bashrc
+  ctags
+  gemrc
+  gitconfig
+  gitignore
+  railsrc
+  rubocop.yml
+  tmux.conf
+  vimrc
+  vim/neobundle.toml
+  vim/neobundlelazy.toml
+  vim/plugins.rc.vim
+)
+
+for file_name in ${file_names[@]}; do
+  ln -vsf "${DOTFILES_DIR}/${file_name}" "${HOME}/.${file_name}"
+done
+
 ln -vsf "${DOTFILES_DIR}/vim" "${HOME}/.config/nvim"
 ln -vsf "${DOTFILES_DIR}/vimrc" "${HOME}/.config/nvim/init.vim"
 
