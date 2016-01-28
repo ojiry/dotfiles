@@ -10,30 +10,47 @@ else
   exit 1;
 fi
 
+echo ""
 echo "Start fetch dotfiles..."
-mkdir -p $DOTFILES_DIR
-git clone git@github.com:ryog/dotfiles.git $DOTFILES_DIR
-echo "Done."
 
+if [ ! -d "${DOTFILES_DIR}" ]; then
+  mkdir -p "${DOTFILES_DIR}"
+  git clone git@github.com:ryog/dotfiles.git "${DOTFILES_DIR}"
+else
+  echo "TODO: Add comment"
+fi
+
+echo "Done."
+echo ""
 echo "Start symbolic link dotfiles..."
-ln -vsf $DOTFILES_DIR/bash_aliases ~/.bash_aliases
-ln -vsf $DOTFILES_DIR/bash_profile ~/.bash_profile
-ln -vsf $DOTFILES_DIR/bashrc ~/.bashrc
-ln -vsf $DOTFILES_DIR/ctags ~/.ctags
-ln -vsf $DOTFILES_DIR/gemrc ~/.gemrc
-ln -vsf $DOTFILES_DIR/gitconfig ~/.gitconfig
-ln -vsf $DOTFILES_DIR/gitignore ~/.gitignore
-ln -vsf $DOTFILES_DIR/railsrc ~/.railsrc
-ln -vsf $DOTFILES_DIR/rubocop.yml ~/.rubocop.yml
-ln -vsf $DOTFILES_DIR/tmux.conf ~/.tmux.conf
-ln -vsf $DOTFILES_DIR/vimrc ~/.vimrc
-mkdir ~/.config
-ln -s ~/.vim ~/.config/nvim
-ln -s ~/.vimrc ~/.config/nvim/init.vim
-echo "Done."
 
+[ ! -d "${HOME}/.config" ] && mkdir -p "${HOME}/config"
+[ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"
+
+ln -vsf "${DOTFILES_DIR}/bash_aliases" "${HOME}/.bash_aliases"
+ln -vsf "${DOTFILES_DIR}/bash_profile" "${HOME}/.bash_profile"
+ln -vsf "${DOTFILES_DIR}/bashrc" "${HOME}/.bashrc"
+ln -vsf "${DOTFILES_DIR}/ctags" "${HOME}/.ctags"
+ln -vsf "${DOTFILES_DIR}/gemrc" "${HOME}/.gemrc"
+ln -vsf "${DOTFILES_DIR}/gitconfig" "${HOME}/.gitconfig"
+ln -vsf "${DOTFILES_DIR}/gitignore" "${HOME}/.gitignore"
+ln -vsf "${DOTFILES_DIR}/railsrc" "${HOME}/.railsrc"
+ln -vsf "${DOTFILES_DIR}/rubocop.yml" "${HOME}/.rubocop.yml"
+ln -vsf "${DOTFILES_DIR}/tmux.conf" "${HOME}/.tmux.conf"
+ln -vsf "${DOTFILES_DIR}/vimrc" "${HOME}/.vimrc"
+ln -vsf "${DOTFILES_DIR}/.vim" "${HOME}/.config/nvim"
+ln -vsf "${DOTFILES_DIR}/.vimrc" "${HOME}/.config/nvim/init.vim"
+
+echo "Done."
+echo ""
 echo "Start install NeoBundle"
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
-echo "Done."
 
+if [ ! -d "${HOME}/.vim/bundle/neobundle.vim" ]; then
+  curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+else
+  echo "TODO: Add comment"
+fi
+
+echo "Done."
+echo ""
 echo "Complete setup dotfiles!"
