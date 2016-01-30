@@ -28,6 +28,7 @@ echo "Start symbolic link dotfiles..."
 
 [ ! -d "${HOME}/.config" ] && mkdir -p "${HOME}/config"
 [ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"
+[ ! -d "${HOME}/.vim/rc" ] && mkdir -p "${HOME}/.vim/rc"
 
 file_names=(
   bash_aliases
@@ -41,9 +42,11 @@ file_names=(
   rubocop.yml
   tmux.conf
   vimrc
-  vim/neobundle.toml
-  vim/neobundlelazy.toml
-  vim/plugins.rc.vim
+  vim/init.vim
+  vim/rc/neobundle.toml
+  vim/rc/neobundlelazy.toml
+  vim/rc/plugins.rc.vim
+  vim/rc/vimrc
 )
 
 for file_name in ${file_names[@]}; do
@@ -51,7 +54,6 @@ for file_name in ${file_names[@]}; do
 done
 
 ln -vsf "${HOME}/.vim" "${HOME}/.config/nvim"
-ln -vsf "${HOME}/.vimrc" "${HOME}/.config/nvim/init.vim"
 
 if [ -d "/usr/local/etc/bash_completion.d/" ]; then
   ln -vsf "${DOTFILES_DIR}/completions/dotfile-completion.bash" "/usr/local/etc/bash_completion.d/dotfile-completion.bash"
