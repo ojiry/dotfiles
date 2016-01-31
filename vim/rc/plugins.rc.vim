@@ -9,8 +9,6 @@ if neobundle#tap('lightline.vim') "{{{
 endif "}}}
 
 if neobundle#tap('unite.vim') "{{{
-  let g:unite_enable_start_insert=1
-  let g:unite_source_history_yank_enable =1
   noremap <C-P> :Unite buffer<CR>
   noremap <C-N> :Unite -buffer-name=file file<CR>
   au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
@@ -21,6 +19,9 @@ if neobundle#tap('unite.vim') "{{{
   au FileType unite inoremap <silent> <buffer> <expr> <C-T> unite#do_action('tabopen')
   au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
   au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
+
+  let neobundle#hooks.on_source =
+        \ '~/.vim/rc/plugins/unite.rc.vim'
 
   call neobundle#untap()
 endif "}}}
