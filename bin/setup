@@ -45,6 +45,7 @@ file_names=(
   vim/init.vim
   vim/rc/neobundle.toml
   vim/rc/neobundlelazy.toml
+  vim/rc/plugins
   vim/rc/plugins.rc.vim
   vim/rc/vimrc
 )
