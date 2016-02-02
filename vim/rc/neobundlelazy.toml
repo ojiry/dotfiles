@@ -63,3 +63,6 @@ repo = 'fatih/vim-go'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'cespare/vim-toml'

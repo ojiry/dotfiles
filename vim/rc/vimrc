@@ -6,9 +6,14 @@ function! s:source_rc(path) abort
   execute 'source' fnameescape(expand('~/.vim/rc/' . a:path))
 endfunction
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+nnoremap ;  <Nop>
+xnoremap ;  <Nop>
+nnoremap m  <Nop>
+xnoremap m  <Nop>
+nnoremap ,  <Nop>
+xnoremap ,  <Nop>
+
+setglobal runtimepath^=~/.vim/bundle/neobundle.vim/
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
@@ -38,7 +43,6 @@ if !has('vim_starting')
   NeoBundleCheck
 endif
 
-
 setglobal ambiwidth=double
 setglobal autoindent
 setglobal backspace=2
@@ -58,5 +62,5 @@ setglobal wildmenu
 hi Comment ctermfg=69
 
 if filereadable(expand($HOME.'/.vimrc.local'))
-  execute 'source' $HOME.'/.vimrc.local'
+  execute 'source' expand($HOME.'/.vimrc.local')
 endif
