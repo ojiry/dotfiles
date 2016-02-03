@@ -14,8 +14,13 @@ if neobundle#tap('unite.vim') "{{{
   nmap    ;u [unite]
   xmap    ;u [unite]
 
-  noremap <C-P> :Unite buffer<CR>
-  noremap <C-N> :Unite -buffer-name=file file<CR>
+  nnoremap <silent> ;g
+        \ :<C-u>Unite grep -buffer-name=grep`tabpagenr()`
+        \ -auto-preview -no-split -no-empty -resume<CR>
+  nnoremap <silent> ;p
+        \ :Unite buffer<CR>
+  nnoremap <silent> ;n
+        \ :Unite -buffer-name=file file<CR>
   au FileType unite nnoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
   au FileType unite inoremap <silent> <buffer> <expr> <C-J> unite#do_action('split')
   au FileType unite nnoremap <silent> <buffer> <expr> <C-K> unite#do_action('vsplit')
