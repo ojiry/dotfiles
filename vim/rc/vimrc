@@ -1,5 +1,5 @@
 if &compatible
-  setglobal nocompatible
+  set nocompatible
 endif
 
 function! s:source_rc(path) abort
@@ -13,7 +13,7 @@ xnoremap m  <Nop>
 nnoremap ,  <Nop>
 xnoremap ,  <Nop>
 
-setglobal runtimepath^=~/.vim/bundle/neobundle.vim/
+set runtimepath^=~/.vim/bundle/neobundle.vim/
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
@@ -43,21 +43,21 @@ if !has('vim_starting')
   NeoBundleCheck
 endif
 
-setglobal ambiwidth=double
-setglobal autoindent
-setglobal backspace=2
-setglobal clipboard+=unnamed
-setglobal encoding=utf-8
-setglobal expandtab
-setglobal hlsearch
-setglobal ignorecase
-setglobal laststatus=2
-setglobal nobackup
-setglobal number
-setglobal shiftwidth=2
-setglobal smartcase
-setglobal softtabstop=2
-setglobal wildmenu
+set ambiwidth=double
+set autoindent
+set backspace=2
+set clipboard+=unnamed
+set encoding=utf-8
+set expandtab
+set hlsearch
+set ignorecase
+set laststatus=2
+set nobackup
+set number
+set shiftwidth=2
+set smartcase
+set softtabstop=2
+set wildmenu
 
 hi Comment ctermfg=69
 
