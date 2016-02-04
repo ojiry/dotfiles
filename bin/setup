@@ -29,6 +29,7 @@ echo "Start symbolic link dotfiles..."
 [ ! -d "${HOME}/.config" ] && mkdir -p "${HOME}/config"
 [ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"
 [ ! -d "${HOME}/.vim/rc" ] && mkdir -p "${HOME}/.vim/rc"
+[ ! -d "${HOME}/.vim/ftplugin" ] && mkdir -p "${HOME}/.vim/ftplugin"
 
 file_names=(
   bash_aliases

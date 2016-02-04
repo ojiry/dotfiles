@@ -36,8 +36,6 @@ if neobundle#tap('unite.vim') "{{{
   call neobundle#untap()
 endif "}}}
 
-au FileType go setlocal noexpandtab tabstop=4 shiftwidth=4
-
 let OSTYPE = system('uname')
 
 if neobundle#tap('vim-markdown') "{{{
