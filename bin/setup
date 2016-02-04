@@ -19,7 +19,7 @@ if [ ! -d "${DOTFILES_DIR}" ]; then
   mkdir -p "${DOTFILES_DIR}"
   git clone git@github.com:ryog/dotfiles.git "${DOTFILES_DIR}"
 else
-  echo "TODO: Add comment"
+  echo "${DOTFILES_DIR} already exists!"
 fi
 
 echo "Done."
@@ -63,7 +63,7 @@ echo "Start install NeoBundle"
 if [ ! -d "${HOME}/.vim/bundle/neobundle.vim" ]; then
   curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
 else
-  echo "TODO: Add comment"
+  echo "${HOME}/.vim/bundle/neobundle.vim already exists!"
 fi
 
 echo "Done."
