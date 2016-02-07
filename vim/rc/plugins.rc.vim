@@ -1,9 +1,14 @@
-let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+if neobundle#tap('neocomplete.vim') && has('lua') "{{{
+  let g:neocomplete#enable_at_startup = 1
+  let neobundle#hooks.on_source =
+        \ '~/.vim/rc/plugins/neocomplete.rc.vim'
 
-if neobundle#tap('lightline.vim') "{{{
-  let g:lightline = {
-        \ 'colorscheme': 'wombat',
-        \ }
+  call neobundle#untap()
+endif "}}}
+
+if neobundle#tap('neosnippet.vim') "{{{
+  let neobundle#hooks.on_source =
+        \ '~/.vim/rc/plugins/neosnippet.rc.vim'
 
   call neobundle#untap()
 endif "}}}
@@ -36,24 +41,33 @@ if neobundle#tap('unite.vim') "{{{
   call neobundle#untap()
 endif "}}}
 
-let OSTYPE = system('uname')
-
-if neobundle#tap('vim-markdown') "{{{
-  let g:vim_markdown_folding_disabled=1
-
-  if OSTYPE == "Darwin\n"
-    " marked
-    let g:quickrun_config = {}
-    let g:quickrun_config.markdown = {
-          \ 'outputter' : 'null',
-          \ 'command'   : 'open',
-          \ 'cmdopt'    : '-a',
-          \ 'args'      : 'Marked',
-          \ 'exec'      : '%c %o %a %s',
-          \ }
-  endif
+if neobundle#tap('lightline.vim') "{{{
+  let g:lightline = {
+        \ 'colorscheme': 'wombat',
+        \ }
 
   call neobundle#untap()
 endif "}}}
 
-let g:syntastic_ruby_checkers = ['rubocop']
+if neobundle#tap('vim-quickrun') "{{{
+  nmap <silent> <Leader>r <Plug>(quickrun)
+
+  call neobundle#untap()
+endif "}}}
+
+if neobundle#tap('open-browser.vim') "{{{
+  nmap gs <Plug>(open-browser-wwwsearch)
+
+  function! neobundle#hooks.on_source(bundle) abort
+    nnoremap <Plug>(open-browser-wwwsearch)
+          \ :<C-u>call <SID>www_search()<CR>
+    function! s:www_search() abort
+      let search_word = input('Please input search word: ')
+      if search_word != ''
+        execute 'OpenBrowserSearch' escape(search_word, '"')
+      endif
+    endfunction
+  endfunction
+
+  call neobundle#untap()
+endif "}}}
