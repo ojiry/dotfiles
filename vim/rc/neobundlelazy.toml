@@ -1,5 +1,38 @@
+# Options
+#
+# 'filetypes' : 'on_ft',
+# 'filename_patterns' : 'on_path',
+# 'commands' : 'on_cmd',
+# 'functions' : 'on_func',
+# 'mappings' : 'on_map',
+# 'unite_sources' : 'on_unite',
+# 'insert' : 'on_i',
+# 'explorer' : 'on_path',
+# 'on_source' : 'on_source',
+# 'command_prefix' : 'pre_cmd',
+# 'function_prefixes' : 'pre_func',
+
 [[plugins]]
-repo = 'kannokanno/previm'
+repo = 'Shougo/neomru.vim'
+on_ft = 'all'
+
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+depends = 'Shougo/context_filetype.vim'
+disabled = '!has("lua")'
+on_i = 1
+
+[[plugins]]
+repo = 'Shougo/neosnippet'
+depends = ['Shougo/neosnippet-snippets', 'Shougo/context_filetype.vim']
+on_i = 1
+on_ft = 'snippet'
+on_unite = ['neosnippet', 'neosnippet/user', 'neosnippet/runtime']
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = 'Shougo/neomru.vim'
+on_cmd = 'Unite'
 
 [[plugins]]
 repo = 'kchmck/vim-coffee-script'
@@ -11,28 +44,20 @@ repo = 'kylef/apiblueprint.vim'
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
-repo = 'plasticboy/vim-markdown'
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['markdown', 'mkd']
 
 [[plugins]]
-repo = 'ruby-matchit'
+repo = 'kannokanno/previm'
+on_ft = ['markdown', 'rst', 'mkd']
+depends = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'scrooloose/syntastic'
 
 [[plugins]]
-repo = 'Shougo/neocomplcache'
-
-[[plugins]]
-repo = 'Shougo/neosnippet'
-
-[[plugins]]
-repo = 'Shougo/neocomplcache-rsense'
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
 repo = 'thinca/vim-quickrun'
+on_map = '<Plug>'
 
 [[plugins]]
 repo = 'thoughtbot/vim-rspec'
@@ -53,16 +78,29 @@ repo = 'tpope/vim-rails'
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
 repo = 'vim-ruby/vim-ruby'
+on_map = '<Plug>'
+on_ft = 'ruby'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+on_ft = 'go'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+on_map = '<Plug>'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+on_ft = 'help'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = 'javascript'
