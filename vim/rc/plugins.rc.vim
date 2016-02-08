@@ -71,3 +71,7 @@ if neobundle#tap('open-browser.vim') "{{{
 
   call neobundle#untap()
 endif "}}}
+
+if neobundle#tap('vim-markdown') "{{{
+  let g:vim_markdown_folding_disabled=1
+endif "}}}
