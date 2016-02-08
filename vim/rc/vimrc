@@ -47,6 +47,7 @@ set ambiwidth=double
 set autoindent
 set backspace=2
 set clipboard+=unnamed
+set cursorline
 set encoding=utf-8
 set expandtab
 set hlsearch
@@ -60,6 +61,8 @@ set softtabstop=2
 set wildmenu
 
 hi Comment ctermfg=69
+
+nnoremap <ESC><ESC> :nohlsearch<CR>:match<CR>
 
 if filereadable(expand($HOME.'/.vimrc.local'))
   execute 'source' expand($HOME.'/.vimrc.local')
