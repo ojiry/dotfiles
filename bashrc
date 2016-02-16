@@ -8,3 +8,5 @@ shopt -s histappend
 
 [[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
 [[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

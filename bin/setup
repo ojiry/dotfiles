@@ -30,10 +30,11 @@ echo "Start symbolic link dotfiles..."
 [ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"
 
 file_names=(
-  bash_aliases
-  bash_profile
-  bashrc
+  # bash_aliases
+  # bash_profile
+  # bashrc
   ctags
+  curlrc
   gemrc
   gitconfig
   gitignore
@@ -44,6 +45,8 @@ file_names=(
   vim/init.vim
   vim/ftplugin
   vim/rc
+  zshenv
+  zshrc
 )
 
 for file_name in ${file_names[@]}; do
@@ -54,6 +57,10 @@ ln -fnsv "${HOME}/.vim/" "${HOME}/.config/nvim"
 
 if [ -d "/usr/local/etc/bash_completion.d/" ]; then
   ln -fnsv "${DOTFILES_DIR}/completions/dotfile-completion.bash" "/usr/local/etc/bash_completion.d/dotfile-completion.bash"
+fi
+
+if [ -d "/usr/local/share/zsh-completions" ]; then
+  ln -fnsv "${DOTFILES_DIR}/completions/dotfile-completion.zsh" "/usr/local/share/zsh-completions/_dotfile"
 fi
 
 echo "Done."
