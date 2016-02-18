@@ -1,3 +1,8 @@
+DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
+CANDIDATES := $(wildcard .??*) bin
+EXCLUSIONS := .DS_Store .git .gitmodules
+DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
+
 all: install
 
 clean:
@@ -20,6 +25,7 @@ install: update deploy init
 list:
 
 test:
+	bats $(DOTPATH)/etc/test/**
 
 update:
 	git pull origin master
