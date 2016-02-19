@@ -1,4 +1,4 @@
-# ryog's dotfiles
+# DOTFILES
 
 [![Circle CI](https://circleci.com/gh/ojiry/dotfiles.svg?style=svg)](https://circleci.com/gh/ojiry/dotfiles)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/ojiry/profile/blob/master/LICENSE)
@@ -9,5 +9,16 @@
 ### Run below script.
 
 ```bash
-$ curl https://raw.githubusercontent.com/ryog/dotfiles/master/bin/setup.sh | sh
+$ curl -sL dot.ojiry.com | sh
 ```
+
+## Credits
+
+Acknowledgment; I established this dotfiles referring to the following user's repositories. Thus, I would appreciate it if you used my repository for reference. Thanks.
+
+* These dotfiles are heavily based on [@b4b4r07's dotfiles](https://github.com/b4b4r07/dotfiles)
+
+
+## TODO
+
+ちゃんとREADMEも書く(´・ω・`)
