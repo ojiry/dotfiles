@@ -1,5 +1,5 @@
 @test "deploying dotfiles" {
-  run ../libexec/deploy
+  run make deploy
   [ -h "${HOME}/.ctags" ]
   [ -h "${HOME}/.curlrc" ]
   [ -h "${HOME}/.gemrc" ]

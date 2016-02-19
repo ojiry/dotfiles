@@ -6,8 +6,12 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 all: install
 
 clean:
+	@echo "clean"
 
 deploy:
+	@echo '==> Start to deploy dotfiles to home directory.'
+	@echo ''
+	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
 
 help:
 	@echo "make clean      #=> Remove the dot files and this repo"
@@ -19,10 +23,13 @@ help:
 	@echo "make update     #=> Fetch changes for this repo"
 
 init:
+	@echo "init"
 
 install: update deploy init
+	@echo "install"
 
 list:
+	@echo "list"
 
 test:
 	bats $(DOTPATH)/etc/test/**
