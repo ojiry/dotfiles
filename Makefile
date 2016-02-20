@@ -6,7 +6,8 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 all: install
 
 clean:
-	@echo "clean"
+	@echo 'Remove dot files in your home directory...'
+	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
 
 deploy:
 	@echo '==> Start to deploy dotfiles to home directory.'
