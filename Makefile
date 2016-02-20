@@ -27,7 +27,7 @@ init:
 	@echo "init"
 
 install: update deploy init
-	@echo "install"
+	@exec $$SHELL
 
 list:
 	@echo "list"
