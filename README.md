@@ -16,7 +16,8 @@ $ curl -sL dot.ojiry.com | sh
 
 Acknowledgment; I established this dotfiles referring to the following user's repositories. Thus, I would appreciate it if you used my repository for reference. Thanks.
 
-* These dotfiles are heavily based on [@b4b4r07's dotfiles](https://github.com/b4b4r07/dotfiles)
+* These dotfiles are heavily based on [@b4b4r07/dotfiles](https://github.com/b4b4r07/dotfiles)
+* Vim section based on [@Shougo/shougo-s-github](https://github.com/Shougo/shougo-s-github)
 
 
 ## TODO
