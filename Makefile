@@ -35,6 +35,9 @@ list:
 test:
 	bats $(DOTPATH)/etc/test/**
 
+uninstall: clean
+	-rm -rf $(DOTPATH)
+
 update:
 	git pull origin master
 	git submodule init
