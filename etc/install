@@ -1,3 +1,71 @@
 #!/usr/bin/env bash
 
-echo "Hello World"
+is_exists() {
+    which "$1" >/dev/null 2>&1
+    return $?
+}
+
+if [ -z "${DOTPATH:-}" ]; then
+    DOTPATH=~/.dotfiles; export DOTPATH
+fi
+
+DOTFILES_GITHUB="https://github.com/ojiry/dotfiles.git"; export DOTFILES_GITHUB
+
+dotfiles_download() {
+    if [ -d "$DOTPATH" ]; then
+        echo "$DOTPATH: already exists"
+        exit 1
+    fi
+
+    if is_exists "git"; then
+        # --recursive equals to ...
+        # git submodule init
+        # git submodule update
+        git clone --recursive "$DOTFILES_GITHUB" "$DOTPATH"
+
+    elif is_exists "curl" || is_exists "wget"; then
+        # curl or wget
+        local tarball="https://github.com/ojiry/dotfiles/archive/master.tar.gz"
+        if is_exists "curl"; then
+            curl -L "$tarball"
+
+        elif is_exists "wget"; then
+            wget -O - "$tarball"
+
+        fi | tar xvz
+        if [ ! -d dotfiles-master ]; then
+            echo "dotfiles-master: not found"
+            exit 1
+        fi
+        command mv -f dotfiles-master "$DOTPATH"
+
+    else
+        echo "curl or wget required"
+        exit 1
+    fi
+}
+
+dotfiles_deploy() {
+}
+
+dotfiles_initialize() {
+}
+
+# A script for the file named "install"
+dotfiles_install() {
+    # 1. Download the repository
+    # ==> downloading
+    #
+    # Priority: git > curl > wget
+    dotfiles_download &&
+
+    # 2. Deploy dotfiles to your home directory
+    # ==> deploying
+    dotfiles_deploy &&
+
+    # 3. Execute all sh files within etc/init/
+    # ==> initializing
+    dotfiles_initialize "$@"
+}
+
+# TODO
