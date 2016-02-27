@@ -32,8 +32,9 @@ install: update deploy init
 list:
 	@echo "list"
 
+.PHONY: test
 test:
-	bats $(DOTPATH)/etc/test/**
+	bats $(DOTPATH)/test/**
 
 uninstall: clean
 	-rm -rf $(DOTPATH)
