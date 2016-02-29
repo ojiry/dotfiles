@@ -13,35 +13,44 @@ xnoremap m  <Nop>
 nnoremap ,  <Nop>
 xnoremap ,  <Nop>
 
-set runtimepath^=~/.vim/bundle/neobundle.vim/
+let $CACHE = expand('~/.cache')
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+let s:dein_dir = finddir('dein.vim', '.;')
+if s:dein_dir != '' || &runtimepath !~ '/dein.vim'
+  if s:dein_dir == '' && &runtimepath !~ '/dein.vim'
+    let s:dein_dir = expand('$CACHE/dein')
+          \. '/repos/github.com/Shougo/dein.vim'
 
-if neobundle#load_cache(
-      \ expand('<sfile>'),
-      \ '~/.vim/rc/neobundle.toml',
-      \ '~/.vim/rc/neobundlelazy.toml')
-  NeoBundleFetch 'Shougo/neobundle.vim'
+    if !isdirectory(s:dein_dir)
+      execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
+    endif
+  endif
 
-  call neobundle#load_toml(
-        \ '~/.vim/rc/neobundle.toml')
-  call neobundle#load_toml(
-        \ '~/.vim/rc/neobundlelazy.toml', {'lazy' : 1})
+  execute ' set runtimepath^=' . fnamemodify(s:dein_dir, ':p')
+endif
 
-  NeoBundleSaveCache
+call dein#begin(expand('$CACHE/dein'))
+
+let s:toml_path = '~/.vim/rc/dein.toml'
+let s:toml_lazy_path = '~/.vim/rc/deinlazy.toml'
+
+if dein#load_cache([expand('<sfile>'), s:toml_path, s:toml_lazy_path])
+  call dein#load_toml(s:toml_path, {'lazy': 0})
+  call dein#load_toml(s:toml_lazy_path, {'lazy' : 1})
+  call dein#save_cache()
 endif
 
 call s:source_rc('plugins.rc.vim')
 
-call neobundle#end()
+call dein#end()
+
+if dein#check_install()
+  call dein#install()
+endif
 
 filetype plugin indent on
 
 syntax enable
-
-if !has('vim_starting')
-  NeoBundleCheck
-endif
 
 set ambiwidth=double
 set autoindent

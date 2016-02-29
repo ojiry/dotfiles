@@ -1,19 +1,15 @@
-if neobundle#tap('neocomplete.vim') && has('lua') "{{{
+if dein#tap('neocomplete.vim') && has('lua') "{{{
   let g:neocomplete#enable_at_startup = 1
-  let neobundle#hooks.on_source =
-        \ '~/.vim/rc/plugins/neocomplete.rc.vim'
-
-  call neobundle#untap()
+  execute 'autocmd MyAutoCmd User' 'dein#source#'.g:dein#name
+        \ 'source ~/.vim/rc/plugins/neocomplete.rc.vim'
 endif "}}}
 
-if neobundle#tap('neosnippet.vim') "{{{
-  let neobundle#hooks.on_source =
-        \ '~/.vim/rc/plugins/neosnippet.rc.vim'
-
-  call neobundle#untap()
+if dein#tap('neosnippet.vim') "{{{
+  execute 'autocmd MyAutoCmd User' 'dein#source#'.g:dein#name
+        \ 'source ~/.vim/rc/plugins/neosnippet.rc.vim'
 endif "}}}
 
-if neobundle#tap('unite.vim') "{{{
+if dein#tap('unite.vim') "{{{
   nnoremap    [unite]   <Nop>
   xnoremap    [unite]   <Nop>
   nmap    ;u [unite]
@@ -35,30 +31,24 @@ if neobundle#tap('unite.vim') "{{{
   au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
   au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 
-  let neobundle#hooks.on_source =
-        \ '~/.vim/rc/plugins/unite.rc.vim'
-
-  call neobundle#untap()
+  " execute 'autocmd MyAutoCmd User' 'dein#source#'.g:dein#name
+  "       \ 'source ~/.vim/rc/plugins/unite.rc.vim'
 endif "}}}
 
-if neobundle#tap('lightline.vim') "{{{
+if dein#tap('lightline.vim') "{{{
   let g:lightline = {
         \ 'colorscheme': 'wombat',
         \ }
-
-  call neobundle#untap()
 endif "}}}
 
-if neobundle#tap('vim-quickrun') "{{{
+if dein#tap('vim-quickrun') "{{{
   nmap <silent> <Leader>r <Plug>(quickrun)
-
-  call neobundle#untap()
 endif "}}}
 
-if neobundle#tap('open-browser.vim') "{{{
+if dein#tap('open-browser.vim') "{{{
   nmap gs <Plug>(open-browser-wwwsearch)
 
-  function! neobundle#hooks.on_source(bundle) abort
+  function! s:open_browser_on_source() abort
     nnoremap <Plug>(open-browser-wwwsearch)
           \ :<C-u>call <SID>www_search()<CR>
     function! s:www_search() abort
@@ -68,10 +58,10 @@ if neobundle#tap('open-browser.vim') "{{{
       endif
     endfunction
   endfunction
-
-  call neobundle#untap()
+  " execute 'autocmd MyAutoCmd User' 'dein#source#'.g:dein#name
+  "       \ 'call s:open_browser_on_source()'
 endif "}}}
 
-if neobundle#tap('vim-markdown') "{{{
+if dein#tap('vim-markdown') "{{{
   let g:vim_markdown_folding_disabled=1
 endif "}}}
