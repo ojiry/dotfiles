@@ -91,10 +91,6 @@ on_ft = 'go'
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = 'toml'
-
-[[plugins]]
 repo = 'tyru/open-browser.vim'
 on_map = '<Plug>'
 
