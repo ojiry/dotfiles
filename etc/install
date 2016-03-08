@@ -46,6 +46,13 @@ dotfiles_download() {
 }
 
 dotfiles_deploy() {
+    if [ ! -d $DOTPATH ]; then
+        echo "$DOTPATH: not found"
+        exit 1
+    fi
+
+    cd "$DOTPATH"
+    make deploy
 }
 
 dotfiles_initialize() {
