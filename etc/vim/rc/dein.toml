@@ -16,3 +16,6 @@ on_ft = 'json'
 
 [[plugins]]
 repo = 'vim-jp/autofmt'
+
+[[plugins]]
+repo = 'haya14busa/vim-migemo'
