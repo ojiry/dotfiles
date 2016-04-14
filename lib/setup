@@ -16,17 +16,13 @@ if [ ! -n "$DOTFILES_HOME" ]; then
   DOTFILES_HOME="${HOME}/.dotfiles"
 fi
 
-file_names=($(find ${DOTFILES_HOME} -name 'dot.*' -type f))
-
-echo 'hoge'
-echo $file_names
+file_names=($(find ${DOTFILES_HOME} -name 'dot.*' -type f | awk -F/ '{print $NF}'))
 
 for file_name in "${file_names[@]}"; do
   if [ -n "$DOTFILE_DEBUG" ]; then
     echo ${file_name}
-    echo 'hoge'
   else
-    ln -fnsv "${DOTFILES_DIR}/${file_name}" "${HOME}/.${file_name}"
+    ln -fnsv "${DOTFILES_HOME}/${file_name}" "${HOME}/${file_name#dot}"
   fi
 done
 

@@ -65,3 +65,7 @@ endif "}}}
 if dein#tap('vim-markdown') "{{{
   let g:vim_markdown_folding_disabled=1
 endif "}}}
+
+if dein#tap('vim-migemo') "{{{
+  nmap g/ :<C-u>Migemo<CR>
+endif "}}}
