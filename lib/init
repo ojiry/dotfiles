@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ "$1" = "--debug" ]; then
+  export DOTFILE_DEBUG=1
+  shift
+fi
+
+if [ -n "$DOTFILE_DEBUG" ]; then
+  export PS4='+ [${BASH_SOURCE##*/}:${LINENO}] '
+  set -x
+fi
+
+[ ! -d "${HOME}/.config" ] && mkdir -p "${HOME}/.config"
+[ ! -d "${HOME}/.config/fish" ] && mkdir -p "${HOME}/.config/fish"
+[ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"

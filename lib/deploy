@@ -26,10 +26,6 @@ for file_name in "${file_names[@]}"; do
   fi
 done
 
-# [ ! -d "${HOME}/.config" ] && mkdir -p "${HOME}/.config"
-# [ ! -d "${HOME}/.config/fish" ] && mkdir -p "${HOME}/.config/fish"
-# [ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"
-# 
 # if [ -n "$DOTFILE_DEBUG" ]; then
 #   
 # else
