@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+set -e
+
+if [ "$1" = "--debug" ]; then
+  export DOTFILE_DEBUG=1
+  shift
+fi
+
+if [ -n "$DOTFILE_DEBUG" ]; then
+  export PS4='+ [${BASH_SOURCE##*/}:${LINENO}] '
+  set -x
+fi
+
+if [ ! -n "$DOTFILES_HOME" ]; then
+  DOTFILES_HOME="${HOME}/.dotfiles"
+fi
+
+file_names=($(find ${DOTFILES_HOME} -name 'dot.*' -type f | awk -F/ '{print $NF}'))
+
+for file_name in "${file_names[@]}"; do
+  if [ -n "$DOTFILE_DEBUG" ]; then
+    echo ${file_name}
+  else
+    rm -frv "${HOME}/${file_name#dot}"
+  fi
+done

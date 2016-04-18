@@ -6,8 +6,7 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 all: install
 
 clean:
-	@echo 'Remove dot files in your home directory...'
-	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
+	./lib/clean
 
 deploy:
 	./lib/deploy
