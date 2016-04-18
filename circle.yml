@@ -6,7 +6,7 @@ dependencies:
 
 machine:
   environment:
-    DOTFILES_HOME: ~/dotfiles
+    DOTFILES_HOME: /home/ubuntu/dotfiles
 
 test:
   override:
