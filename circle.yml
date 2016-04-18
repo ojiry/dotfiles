@@ -4,6 +4,10 @@ dependencies:
     - sudo apt-get update -qq
     - sudo apt-get install -qq bats
 
+machine:
+  environment:
+    DOTFILES_HOME: ~/dotfiles
+
 test:
   override:
     - make test
