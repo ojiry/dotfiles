@@ -10,9 +10,7 @@ clean:
 	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
 
 deploy:
-	@echo '==> Start to deploy dotfiles to home directory.'
-	@echo ''
-	@$(foreach val, $(DOTFILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
+	./lib/deploy
 
 help:
 	@echo "make clean      #=> Remove the dot files and this repo"
