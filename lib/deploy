@@ -26,9 +26,8 @@ for file_name in "${file_names[@]}"; do
   fi
 done
 
-# if [ -n "$DOTFILE_DEBUG" ]; then
-#   
-# else
-#   ln -fnsv "${DOTFILES_DIR}/dot.config/fish/config.fish/" "${HOME}/.config/fish/config.fish"
-#   ln -fnsv "${HOME}/.vim/" "${HOME}/.config/nvim"
-# fi
+if [ -n "$DOTFILE_DEBUG" ]; then
+  echo 'config.fish'
+else
+  ln -fnsv "${DOTFILES_DIR}/dot.config/fish/config.fish/" "${HOME}/.config/fish/config.fish"
+fi
