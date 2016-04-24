@@ -7,11 +7,16 @@
     st  = status -s
 [color]
     ui = auto
+    status = auto
+    diff = auto
+    branch = auto
+    interactive = auto
+    grep = auto
 [core]
     editor = vim
     excludesfile = ~/.gitignore
 [push]
-    default = tracking
+    default = simple
 [user]
     name = Ryoji Yoshioka
     email = yoshioka.ryoji@gmail.com
