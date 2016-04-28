@@ -30,6 +30,6 @@ if [ -n "$DOTFILE_DEBUG" ]; then
   echo 'config/fish/config.fish'
   echo 'config/git/ignore'
 else
-  ln -fnsv "${DOTFILES_DIR}/dot.config/fish/config.fish" "${HOME}/.config/fish/config.fish"
-  ln -fnsv "${DOTFILES_DIR}/dot.config/git/ignore" "${HOME}/.config/git/ignore"
+  ln -fnsv "${DOTFILES_HOME}/dot.config/fish/config.fish" "${HOME}/.config/fish/config.fish"
+  ln -fnsv "${DOTFILES_HOME}/dot.config/git/ignore" "${HOME}/.config/git/ignore"
 fi
