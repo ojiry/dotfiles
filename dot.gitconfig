@@ -1,6 +1,6 @@
 [alias]
     br  = branch
-    ci  = commit -v
+    ci  = commit --cleanup=scissors
     cie = commit --allow-empty
     co  = checkout
     d   = diff
