@@ -6,9 +6,11 @@ DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 all: install
 
 clean:
+	@echo "Clean"
 	./lib/clean
 
 deploy:
+	@echo "Deploy"
 	./lib/deploy
 
 help:
@@ -21,7 +23,8 @@ help:
 	@echo "make update     #=> Fetch changes for this repo"
 
 init:
-	@echo "init"
+	@echo "Init"
+	./lib/init
 
 install: update deploy init
 	@exec $$SHELL
