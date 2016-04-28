@@ -14,7 +14,6 @@
     grep = auto
 [core]
     editor = vim
-    excludesfile = ~/.gitignore
 [push]
     default = simple
 [user]
