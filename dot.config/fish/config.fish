@@ -2,6 +2,7 @@ set -U PAGER less
 set -U XDG_CONFIG_HOME $HOME/.config
 set -x PATH $HOME/bin $PATH
 
+alias ag "ag --stats -S"
 alias g git
 alias r rails
 alias vi nvim
