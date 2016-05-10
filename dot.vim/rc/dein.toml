@@ -1,10 +1,9 @@
 [[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
-
-  [plugins.build]
-  mac = 'make -f make_mac.mak'
-  unix = 'make -f make_unix.mak'
 
 [[plugins]]
 repo = 'cespare/vim-toml'
@@ -18,4 +17,25 @@ on_ft = 'json'
 repo = 'vim-jp/autofmt'
 
 [[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = ['markdown', 'mkd']
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_map = '<Plug>'
+on_ft = 'ruby'
+
+[[plugins]]
+repo = 'jelera/vim-javascript-syntax'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'vim-jp/vimdoc-ja'
+on_ft = 'help'
+
+[[plugins]]
 repo = 'haya14busa/vim-migemo'
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+

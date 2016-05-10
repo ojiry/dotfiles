@@ -45,10 +45,6 @@ repo = 'kylef/apiblueprint.vim'
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
-repo = 'rcmdnk/vim-markdown'
-on_ft = ['markdown', 'mkd']
-
-[[plugins]]
 repo = 'scrooloose/syntastic'
 
 [[plugins]]
@@ -62,9 +58,6 @@ repo = 'thoughtbot/vim-rspec'
 repo = 'tpope/vim-dispatch'
 
 [[plugins]]
-repo = 'tpope/vim-endwise'
-
-[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
@@ -72,11 +65,6 @@ repo = 'tpope/vim-rails'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'vim-ruby/vim-ruby'
-on_map = '<Plug>'
-on_ft = 'ruby'
 
 [[plugins]]
 repo = 'fatih/vim-go'
@@ -93,11 +81,3 @@ on_map = [['n', '<Plug>']]
 repo = 'kannokanno/previm'
 on_cmd = 'PrevimOpen'
 depends = 'open-browser.vim'
-
-[[plugins]]
-repo = 'vim-jp/vimdoc-ja'
-on_ft = 'help'
-
-[[plugins]]
-repo = 'jelera/vim-javascript-syntax'
-on_ft = 'javascript'
