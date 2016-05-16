@@ -39,3 +39,5 @@ repo = 'haya14busa/vim-migemo'
 [[plugins]]
 repo = 'tpope/vim-endwise'
 
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
