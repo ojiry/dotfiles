@@ -114,3 +114,6 @@ on_map = [['n', '<Plug>']]
 repo = 'kannokanno/previm'
 on_cmd = 'PrevimOpen'
 depends = 'open-browser.vim'
+
+[[plugins]]
+repo = 'pearofducks/ansible-vim'
