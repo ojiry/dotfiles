@@ -32,10 +32,8 @@ endif
 call dein#begin(expand('$CACHE/dein'))
 
 let s:toml_path = '~/.vim/rc/dein.toml'
-let s:toml_lazy_path = '~/.vim/rc/deinlazy.toml'
 
 call dein#load_toml('~/.vim/rc/dein.toml', {'lazy': 0})
-call dein#load_toml('~/.vim/rc/deinlazy.toml', {'lazy' : 1})
 
 call s:source_rc('plugins.rc.vim')
 
