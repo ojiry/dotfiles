@@ -53,6 +53,9 @@ disabled = '!has("lua")'
 on_i = 1
 
 [[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'Shougo/neosnippet'
 depends = ['Shougo/neosnippet-snippets', 'Shougo/context_filetype.vim']
 on_i = 1
