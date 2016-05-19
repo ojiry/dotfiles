@@ -68,10 +68,3 @@ set wildmenu
 hi Comment ctermfg=69
 
 nnoremap <ESC><ESC> :nohlsearch<CR>:match<CR>
-
-" TODO
-au BufRead,BufNewFile,BufReadPre *.coffee set filetype=coffee
-
-if filereadable(expand($HOME.'/.vimrc.local'))
-  execute 'source' expand($HOME.'/.vimrc.local')
-endif
