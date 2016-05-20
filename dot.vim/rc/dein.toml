@@ -117,3 +117,6 @@ depends = 'open-browser.vim'
 
 [[plugins]]
 repo = 'pearofducks/ansible-vim'
+
+[[plugins]]
+repo = 'vim-emoji'
