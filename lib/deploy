@@ -28,6 +28,7 @@ done
 
 if [ -n "$DOTFILE_DEBUG" ]; then
   echo '.config/fish/config.fish'
+  echo '.config/fish/fishfile'
   echo '.config/git/ignore'
   echo '.config/nvim/init.vim'
   echo '.vim/filetype.vim'
@@ -35,6 +36,7 @@ if [ -n "$DOTFILE_DEBUG" ]; then
   echo '.vim/rc'
 else
   ln -fnsv "${DOTFILES_HOME}/dot.config/fish/config.fish" "${HOME}/.config/fish/config.fish"
+  ln -fnsv "${DOTFILES_HOME}/dot.config/fish/fishfile" "${HOME}/.config/fish/fishfile"
   ln -fnsv "${DOTFILES_HOME}/dot.config/git/ignore" "${HOME}/.config/git/ignore"
   ln -fnsv "${DOTFILES_HOME}/dot.vim/init.vim" "${HOME}/.config/nvim/init.vim"
   ln -fnsv "${DOTFILES_HOME}/dot.vim/filetype.vim" "${HOME}/.vim/filetype.vim"
