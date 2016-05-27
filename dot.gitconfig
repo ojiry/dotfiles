@@ -14,6 +14,8 @@
     grep = auto
 [core]
     editor = vim
+[ghq]
+    root = ~/work/src
 [push]
     default = simple
 [user]
