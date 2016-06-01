@@ -7,7 +7,6 @@ set -x PATH $HOME/bin $PATH $GOPATH/bin
 alias ag "ag --stats -S"
 alias g git
 alias r rails
-alias tmux "tmux -u"
 alias vi nvim
 alias vim nvim
 
