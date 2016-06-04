@@ -3,7 +3,7 @@
     ci = commit -v
     co = checkout
     df = diff
-    st = status -s
+    st = status
 [color]
     ui = auto
     status = auto
