@@ -11,8 +11,10 @@ set -gx DOCKER_MACHINE_NAME "default";
 set -gx GOPATH $HOME/work
 set -gx PATH $PATH $GOPATH/bin
 
-set -gx ORACLE_HOME $HOME/opt/oracle
-set -gx OCI_DIR $ORACLE_HOME/instantclient_11_2
+if test -d $HOME/opt/oracle
+  set -gx ORACLE_HOME $HOME/opt/oracle
+  set -gx OCI_DIR $ORACLE_HOME/instantclient_11_2
+end
 
 set -gx XDG_CONFIG_HOME $HOME/.config
 
