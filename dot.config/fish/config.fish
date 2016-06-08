@@ -19,6 +19,7 @@ end
 set -gx XDG_CONFIG_HOME $HOME/.config
 
 alias ag "ag --stats -S"
+alias emacs nvim
 alias g git
 alias r rails
 alias vi nvim
