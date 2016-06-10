@@ -1,7 +1,7 @@
 set -gx PATH $HOME/bin $PATH $GOPATH/bin
 
-set -U EDITOR vim
-set -U PAGER less
+set -gx EDITOR vim
+set -gx PAGER less
 
 set -gx DOCKER_TLS_VERIFY "1";
 set -gx DOCKER_HOST "tcp://192.168.99.100:2376";
