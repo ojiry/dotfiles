@@ -1,3 +1,8 @@
+set -gx LANGUAGE en_US.UTF-8
+set -gx LANG $LANGUAGE
+set -gx LC_ALL $LANGUAGE
+set -gx LC_CTYPE $LANGUAGE
+
 set -gx PATH $HOME/bin $PATH $GOPATH/bin
 
 set -gx EDITOR vim
