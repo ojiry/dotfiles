@@ -26,6 +26,10 @@ end
 set -gx XDG_CONFIG_HOME $HOME/.config
 
 alias ag "ag --stats -S"
+alias be "bundle exec"
+alias bi="bundle install"
+alias bo="bundle open"
+alias bu="bundle update"
 alias emacs nvim
 alias g git
 alias r rails
