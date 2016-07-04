@@ -33,6 +33,7 @@ alias bu="bundle update"
 alias emacs nvim
 alias g git
 alias r rails
+alias v nvim
 alias vi nvim
 alias vim nvim
 
