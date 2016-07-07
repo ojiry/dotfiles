@@ -23,8 +23,11 @@ on_map = '<Plug>'
 on_ft = 'ruby'
 
 [[plugins]]
-repo = 'jelera/vim-javascript-syntax'
-on_ft = 'javascript'
+repo = 'pangloss/vim-javascript'
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+depends = 'pangloss/vim-javascript'
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
