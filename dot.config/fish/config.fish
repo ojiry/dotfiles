@@ -18,9 +18,10 @@ set -gx PATH $PATH $GOPATH/bin
 
 set -gx FZF_DEFAULT_OPTS --reverse
 
-if test -d $HOME/opt/oracle
-  set -gx ORACLE_HOME $HOME/opt/oracle
-  set -gx OCI_DIR $ORACLE_HOME/instantclient_11_2
+if test -d $HOME/instantclient_11_2
+  set -gx ORACLE_HOME $HOME/instantclient_11_2
+  set -gx OCI_DIR $ORACLE_HOME
+  set -gx PATH $ORACLE_HOME $PATH
 end
 
 set -gx XDG_CONFIG_HOME $HOME/.config
