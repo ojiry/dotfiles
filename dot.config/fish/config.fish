@@ -39,4 +39,5 @@ alias vi nvim
 alias vim nvim
 
 rbenv init - | source
+eval (direnv hook fish)
 
