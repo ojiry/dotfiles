@@ -186,7 +186,6 @@ jspm_packages
 
 *.rbc
 capybara-*.html
-.rspec
 /log
 /tmp
 /db/*.sqlite3
