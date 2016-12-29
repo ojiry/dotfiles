@@ -6,7 +6,6 @@
   [ ! -h "${HOME}/.gitconfig" ]
   [ ! -h "${HOME}/.gitignore" ]
   [ ! -h "${HOME}/.railsrc" ]
-  [ ! -h "${HOME}/.rubocop.yml" ]
   [ ! -h "${HOME}/.tmux.conf" ]
   [ ! -h "${HOME}/.vimrc" ]
 }
