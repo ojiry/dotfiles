@@ -35,6 +35,8 @@ if [ -n "$DOTFILE_DEBUG" ]; then
   echo '.vim/ftplugin'
   echo '.vim/rc'
 else
+  ln -fnsv "${DOTFILES_HOME}/dot.config/dein/plugins.toml" "${HOME}/.config/dein/plugins.toml"
+  ln -fnsv "${DOTFILES_HOME}/dot.config/dein/plugins_lazy.toml" "${HOME}/.config/dein/plugins_lazy.toml"
   ln -fnsv "${DOTFILES_HOME}/dot.config/fish/config.fish" "${HOME}/.config/fish/config.fish"
   ln -fnsv "${DOTFILES_HOME}/dot.config/fish/fishfile" "${HOME}/.config/fish/fishfile"
   ln -fnsv "${DOTFILES_HOME}/dot.config/git/ignore" "${HOME}/.config/git/ignore"
