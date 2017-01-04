@@ -26,6 +26,9 @@ set -gx PATH $PATH $GOPATH/bin
 set -gx FZF_DEFAULT_OPTS --reverse
 set -gx FZF_LEGACY_KEYBINDINGS 0
 
+# ghq
+set -gx GHQ_SELECTOR fzf
+
 # rbenv
 rbenv init - | source
 
