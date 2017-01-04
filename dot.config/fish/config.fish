@@ -32,6 +32,9 @@ set -gx GHQ_SELECTOR fzf
 # rbenv
 rbenv init - | source
 
+# pyenv
+status --is-interactive; and source (pyenv init -|psub)
+
 # direnv
 eval (direnv hook fish)
 
