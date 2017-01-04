@@ -10,6 +10,8 @@ set -gx PATH $PATH $GOPATH/bin
 set -gx FZF_DEFAULT_OPTS --reverse
 set -gx XDG_CONFIG_HOME $HOME/.config
 
+set -U FZF_LEGACY_KEYBINDINGS 0
+
 alias ag "ag --stats -S"
 alias be "bundle exec"
 alias bi="bundle install"
