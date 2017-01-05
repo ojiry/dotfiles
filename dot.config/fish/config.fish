@@ -25,6 +25,7 @@ set -gx PATH $PATH $GOPATH/bin
 # fzf
 set -gx FZF_DEFAULT_OPTS --reverse
 set -gx FZF_LEGACY_KEYBINDINGS 0
+set -gx FZF_TMUX 1
 
 # ghq
 set -gx GHQ_SELECTOR fzf
