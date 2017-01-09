@@ -17,4 +17,4 @@ fi
 [ ! -d "${HOME}/.config/fish" ] && mkdir -p "${HOME}/.config/fish"
 [ ! -d "${HOME}/.config/nvim" ] && mkdir -p "${HOME}/.config/nvim"
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
-[ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"
+# [ ! -d "${HOME}/.vim" ] && mkdir -p "${HOME}/.vim"

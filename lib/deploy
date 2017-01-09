@@ -41,7 +41,7 @@ else
   ln -fnsv "${DOTFILES_HOME}/dot.config/fish/fishfile" "${HOME}/.config/fish/fishfile"
   ln -fnsv "${DOTFILES_HOME}/dot.config/git/ignore" "${HOME}/.config/git/ignore"
   ln -fnsv "${DOTFILES_HOME}/dot.config/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
-  ln -fnsv "${DOTFILES_HOME}/dot.vim/filetype.vim" "${HOME}/.vim/filetype.vim"
-  ln -fnsv "${DOTFILES_HOME}/dot.vim/ftplugin" "${HOME}/.vim/ftplugin"
-  ln -fnsv "${DOTFILES_HOME}/dot.vim/rc" "${HOME}/.vim/rc"
+  # ln -fnsv "${DOTFILES_HOME}/dot.vim/filetype.vim" "${HOME}/.vim/filetype.vim"
+  # ln -fnsv "${DOTFILES_HOME}/dot.vim/ftplugin" "${HOME}/.vim/ftplugin"
+  # ln -fnsv "${DOTFILES_HOME}/dot.vim/rc" "${HOME}/.vim/rc"
 fi
