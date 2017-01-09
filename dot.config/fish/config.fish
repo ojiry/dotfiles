@@ -30,6 +30,9 @@ set -gx FZF_TMUX 1
 # ghq
 set -gx GHQ_SELECTOR fzf
 
+# nodebrew
+set -gx PATH $HOME/.nodebrew/current/bin $PATH
+
 # rbenv
 rbenv init - | source
 
