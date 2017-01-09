@@ -38,8 +38,7 @@ if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
 
-let g:python_host_prog  = '/usr/local/bin/python2'
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = expand('$HOME/.pyenv/shims/python')
 
 set autoindent
 set clipboard+=unnamedplus
