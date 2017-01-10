@@ -2,7 +2,11 @@
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 hook_add = '''
+  nmap <silent> <C-u><C-t> :<C-u>Denite filetype<CR>
+  nmap <silent> <C-u><C-f> :<C-u>Denite file_rec<CR>
   nmap <silent> <C-u><C-g> :<C-u>Denite grep<CR>
+  nmap <silent> <C-u><C-l> :<C-u>Denite line<CR>
+  nmap <silent> <C-u><C-w> :<C-u>DeniteCursorWord grep<CR>
 '''
 hook_post_source = '''
   call denite#custom#var('file_rec', 'command',
