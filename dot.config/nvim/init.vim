@@ -40,8 +40,6 @@ endif
 
 let g:python3_host_prog = expand('$HOME/.pyenv/shims/python')
 
-syntax on
-
 set autoindent
 set clipboard+=unnamedplus
 set encoding=utf-8
