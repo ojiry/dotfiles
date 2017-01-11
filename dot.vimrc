@@ -1,3 +1,5 @@
+syntax on
+
 set autoindent
 set clipboard+=unnamedplus
 set encoding=utf-8
