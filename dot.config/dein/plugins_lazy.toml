@@ -18,9 +18,3 @@ hook_post_source = '''
   call denite#custom#var('grep', 'default_opts',
     \ ['--vimgrep', '--no-heading'])
 '''
-
-[[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_source = '''
-  let g:deoplete#enable_at_startup = 1
-'''
