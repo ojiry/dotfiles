@@ -16,6 +16,7 @@ fi
 [ ! -d "${HOME}/.config/dein" ] && mkdir -p "${HOME}/.config/dein"
 [ ! -d "${HOME}/.config/fish" ] && mkdir -p "${HOME}/.config/fish"
 [ ! -d "${HOME}/.config/nvim" ] && mkdir -p "${HOME}/.config/nvim"
+[ ! -d "${HOME}/.config/nvim/ftplugin" ] && mkdir -p "${HOME}/.config/nvim/ftplugin"
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
 [ ! -d "${HOME}/.tmux" ] && mkdir -p "${HOME}/.tmux"
 [ ! -d "${HOME}/.tmux/bin" ] && mkdir -p "${HOME}/.tmux/bin"

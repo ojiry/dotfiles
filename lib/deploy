@@ -33,6 +33,7 @@ if [ -n "$DOTFILE_DEBUG" ]; then
   echo '.config/fish/fishfile'
   echo '.config/git/ignore'
   echo '.config/nvim/init.vim'
+  echo '.config/nvim/ftplugin/ruby.vim'
   echo '.tmux/bin/reattach-to-user-namespace'
 else
   ln -fnsv "${DOTFILES_HOME}/dot.config/dein/plugins.toml" "${HOME}/.config/dein/plugins.toml"
@@ -41,5 +42,6 @@ else
   ln -fnsv "${DOTFILES_HOME}/dot.config/fish/fishfile" "${HOME}/.config/fish/fishfile"
   ln -fnsv "${DOTFILES_HOME}/dot.config/git/ignore" "${HOME}/.config/git/ignore"
   ln -fnsv "${DOTFILES_HOME}/dot.config/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
+  ln -fnsv "${DOTFILES_HOME}/dot.config/nvim/ftplugin/ruby.vim" "${HOME}/.config/nvim/ftplugin/ruby.vim"
   ln -fnsv "${DOTFILES_HOME}/dot.tmux/bin/reattach-to-user-namespace" "${HOME}/.tmux/bin/reattach-to-user-namespace"
 fi
