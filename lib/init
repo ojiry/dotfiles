@@ -19,6 +19,6 @@ fi
 [ ! -d "${HOME}/.config/nvim/ftplugin" ] && mkdir -p "${HOME}/.config/nvim/ftplugin"
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
 [ ! -d "${HOME}/.config/git/templates" ] && mkdir -p "${HOME}/.config/git/templates"
-[ ! -d "${HOME}/.config/git/templates/hook" ] && mkdir -p "${HOME}/.config/git/templates/hook"
+[ ! -d "${HOME}/.config/git/templates/hooks" ] && mkdir -p "${HOME}/.config/git/templates/hooks"
 [ ! -d "${HOME}/.tmux" ] && mkdir -p "${HOME}/.tmux"
 [ ! -d "${HOME}/.tmux/bin" ] && mkdir -p "${HOME}/.tmux/bin"
