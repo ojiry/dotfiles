@@ -43,7 +43,6 @@ status --is-interactive; and source (pyenv init -|psub)
 eval (direnv hook fish)
 
 # Aliases
-alias ag "ag --stats -S"
 alias be "bundle exec"
 alias bi "bundle install"
 alias bo "bundle open"
