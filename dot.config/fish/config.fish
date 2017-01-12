@@ -33,12 +33,6 @@ set -gx GHQ_SELECTOR fzf
 # nodebrew
 set -gx PATH $HOME/.nodebrew/current/bin $PATH
 
-# rbenv
-rbenv init - | source
-
-# pyenv
-status --is-interactive; and source (pyenv init -|psub)
-
 # direnv
 eval (direnv hook fish)
 
