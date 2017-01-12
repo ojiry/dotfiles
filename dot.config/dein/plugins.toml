@@ -2,6 +2,9 @@
 repo = 'cespare/vim-toml'
 
 [[plugins]]
+repo = 'elixir-lang/vim-elixir'
+
+[[plugins]]
 repo = 'elzr/vim-json'
 
 [[plugins]]

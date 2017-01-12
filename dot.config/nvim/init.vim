@@ -38,6 +38,8 @@ if has('vim_starting') && dein#check_install()
     call dein#install()
 endif
 
+filetype plugin indent on
+
 let g:python3_host_prog = expand('$HOME/.pyenv/shims/python')
 
 set autoindent
@@ -47,8 +49,10 @@ set expandtab
 set hlsearch
 set ignorecase
 set number
+set shiftwidth=4
 set smartcase
+set softtabstop=4
+set tabstop=4
 
 nnoremap <C-]> g<C-]>
 
-filetype plugin indent on
