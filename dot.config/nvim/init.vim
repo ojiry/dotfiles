@@ -50,3 +50,5 @@ set number
 set smartcase
 
 nnoremap <C-]> g<C-]>
+
+filetype plugin indent on
