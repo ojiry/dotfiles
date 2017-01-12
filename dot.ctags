@@ -1,4 +1,5 @@
 --append
+--extra=+f
 --recurse
 --sort=yes
 --tag-relative

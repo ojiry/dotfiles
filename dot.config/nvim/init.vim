@@ -48,3 +48,5 @@ set hlsearch
 set ignorecase
 set number
 set smartcase
+
+nnoremap <C-]> g<C-]>
