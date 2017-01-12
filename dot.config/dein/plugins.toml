@@ -54,6 +54,3 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'vim-jp/autofmt'
-
-[[plugins]]
-repo = 'vim-ruby/vim-ruby'
