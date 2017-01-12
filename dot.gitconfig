@@ -19,7 +19,7 @@
 [github]
     user = ojiry
 [init]
-    templatedir = ~/.config/git/templates/hook
+    templatedir = ~/.config/git/templates
 [push]
     default = simple
 [user]
