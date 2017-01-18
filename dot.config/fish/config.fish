@@ -36,6 +36,9 @@ set -gx PATH $HOME/.nodebrew/current/bin $PATH
 # direnv
 eval (direnv hook fish)
 
+# hub
+eval (hub alias -s)
+
 # Aliases
 alias be "bundle exec"
 alias bi "bundle install"
