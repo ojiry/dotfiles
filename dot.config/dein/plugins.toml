@@ -35,6 +35,15 @@ repo = 'rcmdnk/vim-markdown'
 repo = 'rust-lang/rust.vim'
 
 [[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
 repo = 'slim-template/vim-slim'
 
 [[plugins]]
