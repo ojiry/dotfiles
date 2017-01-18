@@ -47,6 +47,9 @@ repo = 'slim-template/vim-slim'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
+repo = 'tpope/vim-haml'
+
+[[plugins]]
 repo = 'tpope/vim-rails'
 
 [[plugins]]
