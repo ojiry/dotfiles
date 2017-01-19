@@ -47,6 +47,9 @@ repo = 'Shougo/neosnippet-snippets'
 repo = 'slim-template/vim-slim'
 
 [[plugins]]
+repo = 'tmux-plugins/vim-tmux'
+
+[[plugins]]
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
