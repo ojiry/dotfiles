@@ -49,10 +49,10 @@ set expandtab
 set hlsearch
 set ignorecase
 set number
-set shiftwidth=4
+set shiftwidth=2
 set smartcase
-set softtabstop=4
-set tabstop=4
+set softtabstop=2
+set tabstop=2
 
 nnoremap <C-]> g<C-]>
 
