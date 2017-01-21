@@ -16,7 +16,6 @@ fi
 [ ! -d "${HOME}/.config/dein" ] && mkdir -p "${HOME}/.config/dein"
 [ ! -d "${HOME}/.config/fish" ] && mkdir -p "${HOME}/.config/fish"
 [ ! -d "${HOME}/.config/nvim" ] && mkdir -p "${HOME}/.config/nvim"
-[ ! -d "${HOME}/.config/nvim/ftplugin" ] && mkdir -p "${HOME}/.config/nvim/ftplugin"
 [ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
 [ ! -d "${HOME}/.config/git/templates" ] && mkdir -p "${HOME}/.config/git/templates"
 [ ! -d "${HOME}/.config/git/templates/hooks" ] && mkdir -p "${HOME}/.config/git/templates/hooks"
