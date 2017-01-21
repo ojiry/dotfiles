@@ -38,6 +38,7 @@ if [ -n "$DOTFILE_DEBUG" ]; then
   echo '.config/git/templates/hooks/post-merge'
   echo '.config/nvim/init.vim'
   echo '.config/nvim/ftplugin/ruby.vim'
+  echo '.config/nvim/ftplugin/yaml.vim'
   echo '.tmux/bin/reattach-to-user-namespace'
 else
   ln -fnsv "${DOTFILES_HOME}/dot.config/dein/plugins.toml" "${HOME}/.config/dein/plugins.toml"
@@ -51,5 +52,6 @@ else
   ln -fnsv "${DOTFILES_HOME}/dot.config/git/templates/hooks/post-merge" "${HOME}/.config/git/templates/hooks/post-merge"
   ln -fnsv "${DOTFILES_HOME}/dot.config/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
   ln -fnsv "${DOTFILES_HOME}/dot.config/nvim/ftplugin/ruby.vim" "${HOME}/.config/nvim/ftplugin/ruby.vim"
+  ln -fnsv "${DOTFILES_HOME}/dot.config/nvim/ftplugin/yaml.vim" "${HOME}/.config/nvim/ftplugin/yaml.vim"
   ln -fnsv "${DOTFILES_HOME}/dot.tmux/bin/reattach-to-user-namespace" "${HOME}/.tmux/bin/reattach-to-user-namespace"
 fi
