@@ -1,6 +1,5 @@
 # DOTFILES
 
-[![Circle CI](https://circleci.com/gh/ojiry/dotfiles.svg?style=svg)](https://circleci.com/gh/ojiry/dotfiles)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/ojiry/profile/blob/master/LICENSE)
 [![Platform](https://img.shields.io/badge/platform-OS%20X%20%7C%20Linux-lightgrey.svg?style=flat)](https://github.com/ojiry/dotfiles)
 
@@ -31,7 +30,7 @@ $ cd ~/.dotfiles && make install
 ### Quick installation
 
 ```bash
-$ curl -sL dot.ojiry.com | sh
+$ curl -sL dot.ojiry.com | bash
 ```
 
 ## Credits

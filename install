@@ -23,7 +23,32 @@ if [ ! -d $DOTFILES_HOME ]; then
   exit 1
 fi
 
-cd "$DOTFILES_HOME"
-make install
+[ ! -d "${HOME}/.config" ] && mkdir -p "${HOME}/.config"
+[ ! -d "${HOME}/.config/dein" ] && mkdir -p "${HOME}/.config/dein"
+[ ! -d "${HOME}/.config/fish" ] && mkdir -p "${HOME}/.config/fish"
+[ ! -d "${HOME}/.config/nvim" ] && mkdir -p "${HOME}/.config/nvim"
+[ ! -d "${HOME}/.config/git" ] && mkdir -p "${HOME}/.config/git"
+[ ! -d "${HOME}/.config/git/templates" ] && mkdir -p "${HOME}/.config/git/templates"
+[ ! -d "${HOME}/.config/git/templates/hooks" ] && mkdir -p "${HOME}/.config/git/templates/hooks"
+[ ! -d "${HOME}/.tmux" ] && mkdir -p "${HOME}/.tmux"
+[ ! -d "${HOME}/.tmux/bin" ] && mkdir -p "${HOME}/.tmux/bin"
+
+file_names=($(find ${DOTFILES_HOME} -name 'dot.*' -type f | awk -F/ '{print $NF}'))
+
+for file_name in "${file_names[@]}"; do
+  ln -fnsv "${DOTFILES_HOME}/${file_name}" "${HOME}/${file_name#dot}"
+done
+
+ln -fnsv "${DOTFILES_HOME}/dot.config/dein/plugins.toml" "${HOME}/.config/dein/plugins.toml"
+ln -fnsv "${DOTFILES_HOME}/dot.config/dein/plugins_lazy.toml" "${HOME}/.config/dein/plugins_lazy.toml"
+ln -fnsv "${DOTFILES_HOME}/dot.config/fish/config.fish" "${HOME}/.config/fish/config.fish"
+ln -fnsv "${DOTFILES_HOME}/dot.config/fish/fishfile" "${HOME}/.config/fish/fishfile"
+ln -fnsv "${DOTFILES_HOME}/dot.config/git/ignore" "${HOME}/.config/git/ignore"
+ln -fnsv "${DOTFILES_HOME}/dot.config/git/templates/hooks/ctags" "${HOME}/.config/git/templates/hooks/ctags"
+ln -fnsv "${DOTFILES_HOME}/dot.config/git/templates/hooks/post-checkout" "${HOME}/.config/git/templates/hooks/post-checkout"
+ln -fnsv "${DOTFILES_HOME}/dot.config/git/templates/hooks/post-commit" "${HOME}/.config/git/templates/hooks/post-commit"
+ln -fnsv "${DOTFILES_HOME}/dot.config/git/templates/hooks/post-merge" "${HOME}/.config/git/templates/hooks/post-merge"
+ln -fnsv "${DOTFILES_HOME}/dot.config/nvim/init.vim" "${HOME}/.config/nvim/init.vim"
+ln -fnsv "${DOTFILES_HOME}/dot.tmux/bin/reattach-to-user-namespace" "${HOME}/.tmux/bin/reattach-to-user-namespace"
 
 echo "Installation has been completed."
