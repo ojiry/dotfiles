@@ -15,7 +15,7 @@ Linux/OS X 用の設定ファイルを管理しているリポジトリです。
 * OS X El Capitan
 * Terminal.app
 * Tmux
-* Zsh
+* Fish
 * NeoVim
 
 ## Installation
@@ -24,7 +24,7 @@ Linux/OS X 用の設定ファイルを管理しているリポジトリです。
 
 ```bash
 $ git clone git@github.com:ojiry/dotfiles.git ~/.dotfiles
-$ cd ~/.dotfiles && make install
+$ cd ~/.dotfiles && ./install
 ```
 
 ### Quick installation
@@ -32,13 +32,6 @@ $ cd ~/.dotfiles && make install
 ```bash
 $ curl -sL dot.ojiry.com | bash
 ```
-
-## Credits
-
-Acknowledgment; I established this dotfiles referring to the following user's repositories. Thus, I would appreciate it if you used my repository for reference. Thanks.
-
-* These dotfiles are heavily based on [@b4b4r07/dotfiles](https://github.com/b4b4r07/dotfiles)
-* Vim section based on [@Shougo/shougo-s-github](https://github.com/Shougo/shougo-s-github)
 
 ## License
 
