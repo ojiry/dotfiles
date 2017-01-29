@@ -11,7 +11,6 @@ fisherman/last_job_id
 fisherman/menu
 fisherman/pwd_info
 fisherman/pwd_is_home
-fisherman/pyenv
 fisherman/rbenv
 fisherman/simple
 ojiry/tmux_rename_window
