@@ -48,3 +48,11 @@ alias du "du -h"
 alias g git
 alias r rails
 alias vi vim
+
+# TODO
+function __find_git_branch_and_checkout
+  fish -c "git branch --all" | grep -v HEAD | fzf -m | awk '{ print $1 }' | read -l select
+  git checkout "$select"
+  commandline -f repaint
+end
+alias fco __find_git_branch_and_checkout
