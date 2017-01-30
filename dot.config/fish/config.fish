@@ -33,6 +33,9 @@ set -gx GHQ_SELECTOR fzf
 # nodebrew
 set -gx PATH $HOME/.nodebrew/current/bin $PATH
 
+# z
+set -gx Z_CMD "j"
+
 # direnv
 eval (direnv hook fish)
 
