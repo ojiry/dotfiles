@@ -5,6 +5,12 @@
     co = checkout
     df = diff
     st = status
+    change  = codereview change
+    gofmt   = codereview gofmt
+    mail    = codereview mail
+    pending = codereview pending
+    submit  = codereview submit
+    sync    = codereview sync
 [color]
     ui = auto
     status = auto
