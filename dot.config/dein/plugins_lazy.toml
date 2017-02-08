@@ -9,8 +9,7 @@ hook_add = '''
   nmap <silent> <C-u><C-g> :<C-u>Denite grep<CR>
   nmap <silent> <C-u><C-l> :<C-u>Denite line<CR>
   nmap <silent> <C-u><C-m> :<C-u>Denite file_mru<CR>
-  nmap <silent> <C-u><C-n> :<C-u>Denite -resume -immediately -select=-1<CR>
-  nmap <silent> <C-u><C-p> :<C-u>Denite -resume -immediately -select=+1<CR>
+  nmap <silent> <C-u><C-n> :<C-u>call denite#start([{'name': 'file_rec', 'args': ['~/Documents/Notes']}])<CR>
   nmap <silent> <C-u><C-q> :<C-u>Denite help<CR>
   nmap <silent> <C-u><C-r> :<C-u>Denite -resume<CR>
   nmap <silent> <C-u><C-w> :<C-u>DeniteCursorWord grep<CR>
