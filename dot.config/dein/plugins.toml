@@ -11,6 +11,12 @@ repo = 'elzr/vim-json'
 repo = 'fatih/vim-go'
 
 [[plugins]]
+repo = 'glidenote/memolist.vim'
+hook_add = '''
+  let g:memolist_path = expand('$HOME/Documents/Notes')
+'''
+
+[[plugins]]
 repo = 'hail2u/vim-css3-syntax'
 
 [[plugins]]

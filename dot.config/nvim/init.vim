@@ -56,16 +56,3 @@ set softtabstop=2
 set tabstop=2
 
 nnoremap <C-]> g<C-]>
-
-" ref. http://vim-jp.org/vim-users-jp/2010/11/03/Hack-181.html
-command! -nargs=0 Note call s:open_note()
-function! s:open_note()
-    let l:note_dir = '/tmp/notes'
-    if !isdirectory(l:note_dir)
-        call mkdir(l:note_dir, 'p')
-    endif
-    let l:filename = input('Filetype: ', l:note_dir.strftime('/%Y%m%d%H%M%S.'))
-    if l:filename != ''
-        execute 'edit ' . l:filename
-    endif
-endfunction
