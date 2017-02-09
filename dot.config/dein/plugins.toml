@@ -24,6 +24,9 @@ repo = 'hail2u/vim-css3-syntax'
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
+repo = 'jodosha/vim-godebug'
+
+[[plugins]]
 repo = 'kballard/vim-fish'
 
 [[plugins]]

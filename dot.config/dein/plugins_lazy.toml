@@ -1,8 +1,4 @@
 [[plugins]]
-repo = 'jodosha/vim-godebug'
-on_ft = 'go'
-
-[[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 hook_add = '''
