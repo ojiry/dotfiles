@@ -14,6 +14,7 @@ repo = 'fatih/vim-go'
 repo = 'glidenote/memolist.vim'
 hook_add = '''
   let g:memolist_path = expand('$HOME/Documents/Notes')
+  let g:memolist_denite = 1
 '''
 
 [[plugins]]
