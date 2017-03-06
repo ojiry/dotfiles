@@ -33,6 +33,9 @@ repo = 'kballard/vim-fish'
 repo = 'kchmck/vim-coffee-script'
 
 [[plugins]]
+repo = 'mustache/vim-mustache-handlebars'
+
+[[plugins]]
 repo = 'mxw/vim-jsx'
 
 [[plugins]]
