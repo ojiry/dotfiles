@@ -1,4 +1,8 @@
 --append
+--exclude=*.js
+--exclude=.git
+--exclude=node_modules
+--exclude=vendor
 --extra=+f
 --recurse
 --sort=yes
