@@ -66,6 +66,9 @@ repo = 'tmux-plugins/vim-tmux'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'tpope/vim-haml'
 
 [[plugins]]
@@ -73,6 +76,13 @@ repo = 'tpope/vim-rails'
 
 [[plugins]]
 repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'tpope/vim-rhubarb'
+hook_add = '''
+  nmap <silent> gb :Gbrowse<CR>
+  vmap <silent> gb :Gbrowse<CR>
+'''
 
 [[plugins]]
 repo = 'tpope/vim-surround'
