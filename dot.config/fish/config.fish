@@ -5,7 +5,11 @@ set -gx LC_ALL $LANGUAGE
 set -gx LC_CTYPE $LANGUAGE
 
 # Editor
-set -gx EDITOR vim
+if command -s nvim > /dev/null
+  set -gx EDITOR nvim
+else
+  set -gx EDITOR vim
+end
 set -gx CVSEDITOR $EDITOR
 set -gx SVN_EDITOR $EDITOR
 set -gx GIT_EDITOR $EDITOR
