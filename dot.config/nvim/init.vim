@@ -1,6 +1,9 @@
 let g:cache_home = empty($XDG_CACHE_HOME) ? expand('$HOME/.cache') : $XDG_CACHE_HOME
 let g:config_home = empty($XDG_CONFIG_HOME) ? expand('$HOME/.config') : $XDG_CONFIG_HOME
 
+let g:python_host_prog  = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 let s:dein_cache_dir = g:cache_home . '/dein'
 
 augroup MyAutoCmd
@@ -39,9 +42,6 @@ if has('vim_starting') && dein#check_install()
 endif
 
 filetype plugin indent on
-
-let g:python_host_prog  = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
 
 set autoindent
 set clipboard+=unnamedplus
