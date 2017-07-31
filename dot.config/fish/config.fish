@@ -35,7 +35,9 @@ set -gx FZF_TMUX 1
 set -gx GHQ_SELECTOR fzf
 
 # nodebrew
-set -gx PATH $HOME/.nodebrew/current/bin $PATH
+if command -s nodebrew
+  set -gx PATH $HOME/.nodebrew/current/bin $PATH
+end
 
 # z
 set -gx Z_CMD "j"
