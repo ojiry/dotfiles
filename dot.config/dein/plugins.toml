@@ -98,5 +98,4 @@ hook_add = '''
 
 # for Development
 [[plugins]]
-repo = 'ojiry/bolero'
-build = 'make'
+repo = 'ojiry/bolero.nvim'
