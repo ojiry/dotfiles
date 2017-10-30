@@ -21,7 +21,8 @@
 [core]
     editor = vim
 [ghq]
-    root = ~/ghq/src
+    root = ~/ghq
+    root = ~/go/src
 [github]
     user = ojiry
 [hub]

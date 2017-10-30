@@ -23,7 +23,7 @@ set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_DATA_HOME $HOME/.local/share
 
 # Golang
-set -gx GOPATH $HOME/ghq
+set -gx GOPATH $HOME/go
 set -gx PATH $PATH $GOPATH/bin
 
 # fzf
