@@ -59,6 +59,8 @@ alias r rails
 alias vi vim
 
 # TODO
+alias drq='docker-compose run --rm (basename (pwd))'
+alias deq='docker exec -it qall_(basename (pwd))_1'
 function __find_git_branch_and_checkout
   fish -c "git branch --all" | grep -v HEAD | fzf -m | awk '{ print $1 }' | read -l select
   git checkout "$select"
