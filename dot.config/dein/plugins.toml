@@ -25,6 +25,12 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'jodosha/vim-godebug'
+hook_add = '''
+  nnoremap [godebug] <Nop>
+  nmap <Space>g [godebug]
+  nmap <silent> [godebug]d :GoDebug<CR>
+  nmap <silent> [godebug]t :GoToggleBreakpoint<CR>
+'''
 
 [[plugins]]
 repo = 'kballard/vim-fish'
