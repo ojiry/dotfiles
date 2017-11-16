@@ -32,7 +32,6 @@ set -gx FZF_LEGACY_KEYBINDINGS 1
 set -gx FZF_TMUX 1
 
 # ghq
-set -gx GHQ_ROOT $HOME/ghq
 set -gx GHQ_SELECTOR fzf
 
 # nodebrew
