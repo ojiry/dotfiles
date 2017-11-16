@@ -1,10 +1,14 @@
 [alias]
-    ad = add
-    br = branch
-    ci = commit -v
+    a  = add
+    al = add -A .
+    b  = branch
+    c  = commit -v
     co = checkout
-    df = diff
+    d  = diff
+    f  = fetch --all
+    l  = log --decorate
     st = status
+    su = submodule update
     change  = codereview change
     gofmt   = codereview gofmt
     mail    = codereview mail
@@ -13,11 +17,6 @@
     sync    = codereview sync
 [color]
     ui = auto
-    status = auto
-    diff = auto
-    branch = auto
-    interactive = auto
-    grep = auto
 [core]
     editor = vim
 [ghq]
@@ -32,5 +31,5 @@
 [push]
     default = simple
 [user]
-    name = Ryoji Yoshioka
     email = yoshioka.ryoji@gmail.com
+    name = Ryoji Yoshioka
