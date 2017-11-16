@@ -1,1 +1,2 @@
-EXCLUDES="LICENSE.md README.md tags"
+EXCLUDES="LICENSE README.md tags"
+DOTFILES_DIRS="$HOME/ghq/github.com/ojiry/dotfiles"
