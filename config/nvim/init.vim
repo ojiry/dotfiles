@@ -35,6 +35,8 @@ if dein#load_state(s:dein_cache_dir)
 
     call dein#end()
     call dein#save_state()
+    call dein#call_hook('source')
+    call dein#call_hook('post_source')
 endif
 
 if has('vim_starting') && dein#check_install()

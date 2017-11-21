@@ -56,7 +56,7 @@ on_event = 'TextYankPost'
 on_source = ['denite.nvim']
 
 [[plugins]]
-repo = 'Shougo/deoppet.nvim'
+repo = 'Shougo/neosnippet.vim'
 hook_source = '''
   imap <C-k> <Plug>(neosnippet_expand_or_jump)
   smap <C-k> <Plug>(neosnippet_expand_or_jump)
