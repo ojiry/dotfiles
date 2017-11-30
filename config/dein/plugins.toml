@@ -2,6 +2,9 @@
 repo = 'cespare/vim-toml'
 
 [[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
 repo = 'elixir-lang/vim-elixir'
 
 [[plugins]]
