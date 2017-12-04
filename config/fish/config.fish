@@ -34,11 +34,6 @@ set -gx FZF_TMUX 1
 # ghq
 set -gx GHQ_SELECTOR fzf
 
-# nodebrew
-if command -s nodebrew
-  set -gx PATH $HOME/.nodebrew/current/bin $PATH
-end
-
 # z
 set -gx Z_CMD "j"
 
@@ -52,11 +47,6 @@ if command -s hub >/dev/null
   eval (hub alias -s)
 end
 
-# minikube
-# if command -s minikube >/dev/null
-#   eval (minikube docker-env)
-# end
-
 # Aliases
 alias be "bundle exec"
 alias bi "bundle install"
@@ -68,12 +58,6 @@ alias g git
 alias r rails
 alias vi vim
 
-# TODO
-alias drq='docker-compose run --rm (basename (pwd))'
-alias deq='docker exec -it qall_(basename (pwd))_1'
-function __find_git_branch_and_checkout
-  fish -c "git branch --all" | grep -v HEAD | fzf -m | awk '{ print $1 }' | read -l select
-  git checkout "$select"
-  commandline -f repaint
+if test -e $XDG_CONFIG_HOME/fish/config/local.fish
+  source $XDG_CONFIG_HOME/fish/config/local.fish
 end
-alias fco __find_git_branch_and_checkout
