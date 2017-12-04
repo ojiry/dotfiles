@@ -53,9 +53,9 @@ if command -s hub >/dev/null
 end
 
 # minikube
-if command -s minikube >/dev/null
-  eval (minikube docker-env)
-end
+# if command -s minikube >/dev/null
+#   eval (minikube docker-env)
+# end
 
 # Aliases
 alias be "bundle exec"
