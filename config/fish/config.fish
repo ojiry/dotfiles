@@ -43,10 +43,19 @@ end
 set -gx Z_CMD "j"
 
 # direnv
-eval (direnv hook fish)
+if command -s direnv
+  eval (direnv hook fish)
+end
 
 # hub
-eval (hub alias -s)
+if command -s hub
+  eval (hub alias -s)
+end
+
+# minikube
+if command -s minikube
+  eval (minikube docker-env)
+end
 
 # Aliases
 alias be "bundle exec"
