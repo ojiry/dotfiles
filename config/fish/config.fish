@@ -43,17 +43,17 @@ end
 set -gx Z_CMD "j"
 
 # direnv
-if command -s direnv
+if command -s direnv >/dev/null
   eval (direnv hook fish)
 end
 
 # hub
-if command -s hub
+if command -s hub >/dev/null
   eval (hub alias -s)
 end
 
 # minikube
-if command -s minikube
+if command -s minikube >/dev/null
   eval (minikube docker-env)
 end
 
