@@ -38,12 +38,12 @@ set -gx GHQ_SELECTOR fzf
 set -gx Z_CMD "j"
 
 # direnv
-if command -s direnv >/dev/null
+if command -s direnv > /dev/null
   eval (direnv hook fish)
 end
 
 # hub
-if command -s hub >/dev/null
+if command -s hub > /dev/null
   eval (hub alias -s)
 end
 
