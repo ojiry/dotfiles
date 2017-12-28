@@ -52,6 +52,7 @@ alias be "bundle exec"
 alias bi "bundle install"
 alias bo "bundle open"
 alias bu "bundle update"
+alias c docker-compose
 alias d docker
 alias du "du -h"
 alias g git
