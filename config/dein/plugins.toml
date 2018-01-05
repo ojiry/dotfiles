@@ -25,6 +25,9 @@ repo = 'hail2u/vim-css3-syntax'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+hook_add = '''
+  let g:lightline = { 'colorscheme': 'wombat' }
+'''
 
 [[plugins]]
 repo = 'jodosha/vim-godebug'
