@@ -56,6 +56,7 @@ alias c docker-compose
 alias d docker
 alias du "du -h"
 alias g git
+alias k kubectl
 alias r rails
 alias vi vim
 
