@@ -372,3 +372,8 @@ dist/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+# =========
+#  VS Code
+# =========
+*.code-workspace
