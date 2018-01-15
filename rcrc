@@ -1,2 +1,3 @@
 EXCLUDES="LICENSE README.md tags"
 DOTFILES_DIRS="$HOME/ghq/github.com/ojiry/dotfiles"
+UNDOTTED="Library"
