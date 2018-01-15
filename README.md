@@ -27,5 +27,5 @@ Install [rcm by thoughtbot](https://github.com/thoughtbot/rcm) (dotfile manageme
 Install the dotfiles with rcm:
 
 ```
-env RCRC=(pwd) rcup -d (pwd)
+env RCRC=(pwd)/rcrc rcup -d (pwd)
 ```
