@@ -12,5 +12,9 @@
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "files.trimTrailingWhitespace": true,
+    "[ruby]": {
+        "editor.tabSize": 2
+    }
 }
