@@ -24,6 +24,9 @@ hook_add = '''
 repo = 'hail2u/vim-css3-syntax'
 
 [[plugins]]
+repo = 'hashivim/vim-terraform'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   let g:lightline = { 'colorscheme': 'wombat' }
