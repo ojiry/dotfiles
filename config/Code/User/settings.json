@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "Atom One Dark",
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
     "gitlens.advanced.messages": {
@@ -17,5 +16,6 @@
     "[ruby]": {
         "editor.tabSize": 2
     },
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "workbench.colorTheme": "Atom One Dark"
 }
