@@ -8,7 +8,7 @@
     cp = cherry-pick
     d  = diff
     f  = fetch
-    fa = fetch -all
+    fa = fetch --all
     l  = log
     ld = log --decorate
     m  = merge
