@@ -9,6 +9,7 @@
     d  = diff
     f  = fetch
     fa = fetch --all
+    fp = fetch --prune
     l  = log
     ld = log --decorate
     m  = merge
