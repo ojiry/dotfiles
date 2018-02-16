@@ -9,7 +9,6 @@
     d  = diff
     f  = fetch
     fa = fetch --all
-    fp = fetch --prune
     l  = log
     ld = log --decorate
     m  = merge
@@ -29,6 +28,8 @@
     ui = auto
 [core]
     editor = vim
+[fetch]
+    prune = true
 [ghq]
     root = ~/ghq
     root = ~/go/src
