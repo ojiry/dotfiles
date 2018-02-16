@@ -1,46 +1,46 @@
 [alias]
-    a  = add
-    aa = add -A
-    b  = branch
-    c  = commit
-    ce = commit --allow-empty
-    co = checkout
-    cp = cherry-pick
-    d  = diff
-    f  = fetch
-    fa = fetch --all
-    l  = log
-    ld = log --decorate
-    m  = merge
-    pl = pull
-    ps = push
-    r  = reset
-    s  = status
-    sm = submodule
-    t  = tag
-    change  = codereview change
-    gofmt   = codereview gofmt
-    mail    = codereview mail
-    pending = codereview pending
-    submit  = codereview submit
-    sync    = codereview sync
+  a  = add
+  aa = add -A
+  b  = branch
+  c  = commit
+  ce = commit --allow-empty
+  co = checkout
+  cp = cherry-pick
+  d  = diff
+  f  = fetch
+  fa = fetch --all
+  l  = log
+  ld = log --decorate
+  m  = merge
+  pl = pull
+  ps = push
+  r  = reset
+  s  = status
+  sm = submodule
+  t  = tag
+  change  = codereview change
+  gofmt   = codereview gofmt
+  mail    = codereview mail
+  pending = codereview pending
+  submit  = codereview submit
+  sync    = codereview sync
 [color]
-    ui = auto
+  ui = auto
 [core]
-    editor = vim
+  editor = vim
 [fetch]
-    prune = true
+	prune = true
 [ghq]
-    root = ~/ghq
-    root = ~/go/src
+  root = ~/ghq
+  root = ~/go/src
 [github]
-    user = ojiry
+  user = ojiry
 [hub]
-    protocol = https
+  protocol = https
 [init]
-    templatedir = ~/.config/git/templates
+  templatedir = ~/.config/git/templates
 [push]
-    default = simple
+  default = simple
 [user]
-    email = yoshioka.ryoji@gmail.com
-    name = Ryoji Yoshioka
+  email = yoshioka.ryoji@gmail.com
+  name = Ryoji Yoshioka
