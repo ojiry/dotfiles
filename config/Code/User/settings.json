@@ -18,5 +18,6 @@
     },
     "files.insertFinalNewline": true,
     "workbench.colorTheme": "Atom One Dark",
-    "gitlens.showWhatsNewAfterUpgrades": false
+    "gitlens.showWhatsNewAfterUpgrades": false,
+    "gitlens.keymap": "alternate"
 }
