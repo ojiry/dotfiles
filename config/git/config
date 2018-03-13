@@ -2,7 +2,7 @@
   a  = add
   aa = add -A
   b  = branch
-  c  = commit
+  c  = commit --verbose
   ce = commit --allow-empty
   co = checkout
   cp = cherry-pick
