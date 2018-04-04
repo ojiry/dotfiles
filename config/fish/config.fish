@@ -48,17 +48,14 @@ if command -s hub > /dev/null
 end
 
 # Aliases
-alias be "bundle exec"
-alias bi "bundle install"
-alias bo "bundle open"
-alias bu "bundle update"
+alias b brew
 alias c docker-compose
 alias d docker
+alias e nvim
 alias du "du -h"
 alias g git
 alias k kubectl
-alias r rails
-alias vi vim
+alias n nvim
 
 if test -e $XDG_CONFIG_HOME/fish/config/local.fish
   source $XDG_CONFIG_HOME/fish/config/local.fish
