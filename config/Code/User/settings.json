@@ -8,6 +8,8 @@
         "suppressGitVersionWarning": false,
         "suppressLineUncommittedWarning": false,
         "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
     },
@@ -19,5 +21,6 @@
     "files.insertFinalNewline": true,
     "workbench.colorTheme": "Atom One Dark",
     "gitlens.showWhatsNewAfterUpgrades": false,
-    "gitlens.keymap": "alternate"
+    "gitlens.keymap": "alternate",
+    "gitlens.historyExplorer.enabled": true
 }
