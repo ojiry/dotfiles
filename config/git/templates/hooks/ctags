@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-
-set -e
-PATH="/usr/local/bin:$PATH"
-git ls-files | ctags --tag-relative -R
