@@ -56,6 +56,7 @@ alias du "du -h"
 alias g git
 alias k kubectl
 alias n nvim
+alias t tmux
 
 if test -e $XDG_CONFIG_HOME/fish/config/local.fish
   source $XDG_CONFIG_HOME/fish/config/local.fish
