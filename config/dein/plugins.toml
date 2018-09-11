@@ -60,6 +60,9 @@ repo = 'mustache/vim-mustache-handlebars'
 repo = 'mxw/vim-jsx'
 
 [[plugins]]
+repo = 'ojiry/bolero.vim'
+
+[[plugins]]
 repo = 'pangloss/vim-javascript'
 
 [[plugins]]
