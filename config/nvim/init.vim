@@ -55,3 +55,5 @@ set softtabstop=2
 set tabstop=2
 
 nnoremap <C-]> g<C-]>
+nnoremap <Space>ns :<C-u>split +enew<CR>
+nnoremap <Space>nv :<C-u>vsplit +enew<CR>
