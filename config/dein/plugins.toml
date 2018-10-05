@@ -54,6 +54,9 @@ repo = 'kballard/vim-fish'
 repo = 'kchmck/vim-coffee-script'
 
 [[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
 repo = 'mustache/vim-mustache-handlebars'
 
 [[plugins]]
