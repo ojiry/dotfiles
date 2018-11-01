@@ -47,6 +47,9 @@ if command -s hub > /dev/null
   eval (hub alias -s)
 end
 
+# rustup
+set -gx PATH $PATH $HOME/.cargo/bin
+
 # Aliases
 alias b brew
 alias c docker-compose
