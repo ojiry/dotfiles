@@ -22,5 +22,6 @@
     "workbench.colorTheme": "Atom One Dark",
     "gitlens.showWhatsNewAfterUpgrades": false,
     "gitlens.keymap": "alternate",
-    "gitlens.historyExplorer.enabled": true
+    "gitlens.historyExplorer.enabled": true,
+    "breadcrumbs.enabled": true
 }

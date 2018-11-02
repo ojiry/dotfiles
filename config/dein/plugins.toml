@@ -62,10 +62,15 @@ repo = 'mustache/vim-mustache-handlebars'
 [[plugins]]
 repo = 'mxw/vim-jsx'
 
+# [[plugins]]
+# repo = 'ojiry/bolero.vim'
+# hook_add = '''
+#   colorscheme bolero
+# '''
 [[plugins]]
-repo = 'ojiry/bolero.vim'
+repo = 'cocopon/iceberg.vim'
 hook_add = '''
-  colorscheme bolero
+  colorscheme iceberg
 '''
 
 [[plugins]]
