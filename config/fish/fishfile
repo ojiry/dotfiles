@@ -1,9 +1,2 @@
+matchai/spacefish
 decors/fish-ghq
-fisherman/git_util
-fisherman/host_info
-fisherman/humanize_duration
-fisherman/last_job_id
-fisherman/pwd_info
-fisherman/pwd_is_home
-fisherman/simple.git
-ojiry/tmux_rename_window

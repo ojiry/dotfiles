@@ -23,5 +23,7 @@
     "gitlens.showWhatsNewAfterUpgrades": false,
     "gitlens.keymap": "alternate",
     "gitlens.historyExplorer.enabled": true,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true
 }

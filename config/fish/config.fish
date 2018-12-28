@@ -37,6 +37,26 @@ set -gx GHQ_SELECTOR fzf
 # z
 set -gx Z_CMD "j"
 
+# spacefish
+set -gx SPACEFISH_USER_SHOW always
+set -gx SPACEFISH_GIT_STATUS_SHOW false
+set -gx SPACEFISH_PACKAGE_SHOW false
+set -gx SPACEFISH_NODE_SHOW false
+set -gx SPACEFISH_JULIA_SHOW false
+set -gx SPACEFISH_DOCKER_SHOW false
+set -gx SPACEFISH_RUBY_SHOW false
+set -gx SPACEFISH_HASKELL_SHOW false
+set -gx SPACEFISH_CONDA_SHOW false
+set -gx SPACESHIP_AWS_SHOW false
+set -gx SPACEFISH_PYENV_SHOW false
+set -gx SPACEFISH_GOLANG_SHOW false
+set -gx SPACEFISH_PHP_SHOW false
+set -gx SPACEFISH_RUST_SHOW false
+set -gx SPACEFISH_DOTNET_SHOW false
+set -gx SPACEFISH_KUBECONTEXT_SHOW true
+set -gx SPACEFISH_EXEC_TIME_SHOW true
+set -gx SPACEFISH_BATTERY_SHOW false
+
 # direnv
 if command -s direnv > /dev/null
   eval (direnv hook fish)
