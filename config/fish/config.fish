@@ -59,7 +59,7 @@ set -gx SPACEFISH_BATTERY_SHOW false
 
 # direnv
 if command -s direnv > /dev/null
-  eval (direnv hook fish)
+  source (direnv hook fish | psub)
 end
 
 # hub
@@ -69,6 +69,11 @@ end
 
 # rustup
 set -gx PATH $PATH $HOME/.cargo/bin
+
+# anyenv
+if command -s anyenv > /dev/null
+  source (anyenv init - | sed -e "s/setenv/set -gx/g" | psub)
+end
 
 # Aliases
 alias b brew
