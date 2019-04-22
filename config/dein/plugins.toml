@@ -57,6 +57,12 @@ repo = 'kchmck/vim-coffee-script'
 repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
+repo = 'mhinz/vim-mix-format'
+hook_add = '''
+  let g:mix_format_on_save = 1
+'''
+
+[[plugins]]
 repo = 'mustache/vim-mustache-handlebars'
 
 [[plugins]]
