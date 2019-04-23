@@ -15,6 +15,9 @@ repo = 'elzr/vim-json'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+hook_add = '''
+  let g:go_fmt_autosave=1
+'''
 
 [[plugins]]
 repo = 'glidenote/memolist.vim'

@@ -25,5 +25,6 @@
     "gitlens.historyExplorer.enabled": true,
     "breadcrumbs.enabled": true,
     "gitlens.views.fileHistory.enabled": true,
-    "gitlens.views.lineHistory.enabled": true
+    "gitlens.views.lineHistory.enabled": true,
+    "window.openFilesInNewWindow": "default"
 }
