@@ -31,6 +31,9 @@ repo = 'hail2u/vim-css3-syntax'
 
 [[plugins]]
 repo = 'hashivim/vim-terraform'
+hook_add = '''
+  let g:terraform_fmt_on_save = 1
+'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
