@@ -2,6 +2,12 @@
 repo = 'cespare/vim-toml'
 
 [[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+  colorscheme iceberg
+'''
+
+[[plugins]]
 repo = 'cohama/lexima.vim'
 
 [[plugins]]
@@ -16,7 +22,10 @@ repo = 'elzr/vim-json'
 [[plugins]]
 repo = 'fatih/vim-go'
 hook_add = '''
+  let g:go_def_mapping_enabled = 0
+  let g:go_doc_keywordprg_enabled = 0
   let g:go_fmt_autosave=1
+  let g:go_fmt_command = "goimports"
 '''
 
 [[plugins]]
@@ -74,22 +83,60 @@ repo = 'mustache/vim-mustache-handlebars'
 [[plugins]]
 repo = 'mxw/vim-jsx'
 
-# [[plugins]]
-# repo = 'ojiry/bolero.vim'
-# hook_add = '''
-#   colorscheme bolero
-# '''
 [[plugins]]
-repo = 'cocopon/iceberg.vim'
-hook_add = '''
-  colorscheme iceberg
-'''
+repo = 'natebosch/vim-lsc'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
 
 [[plugins]]
+repo = 'prabirshrestha/async.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-neosnippet.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = '''
+  let g:lsp_async_completion = 1
+  if executable('gopls')
+    au User lsp_setup call lsp#register_server({
+      \ 'name': 'gopls',
+      \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+      \ 'whitelist': ['go'],
+      \ })
+    autocmd BufWritePre *.go LspDocumentFormatSync
+  endif
+  if executable('solargraph')
+    " gem install solargraph
+    au User lsp_setup call lsp#register_server({
+      \ 'name': 'solargraph',
+      \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+      \ 'initialization_options': {"diagnostics": "true"},
+      \ 'whitelist': ['ruby'],
+      \ })
+  endif
+  if executable('rls')
+    au User lsp_setup call lsp#register_server({
+      \ 'name': 'rls',
+      \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+      \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
+      \ 'whitelist': ['rust'],
+      \ })
+  endif
+'''
+
+[[plugins]]
 repo = 'rcmdnk/vim-markdown'
+hook_add = '''
+  let g:vim_markdown_folding_disabled = 1
+'''
 
 [[plugins]]
 repo = 'rust-lang/rust.vim'

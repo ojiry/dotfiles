@@ -22,9 +22,13 @@ set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx XDG_DATA_HOME $HOME/.local/share
 
+# Homebrew
+set -gx HOMEBREW_INSTALL_CLEANUP 1
+
 # Golang
 set -gx GOPATH $HOME/go
 set -gx PATH $PATH $GOPATH/bin
+set -gx GO111MODULE on
 
 # fzf
 set -gx FZF_DEFAULT_OPTS --reverse

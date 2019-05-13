@@ -44,7 +44,7 @@ hook_post_source = '''
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-on_i = 1
+on_event = 'InsertEnter'
 hook_add = '''
   let g:deoplete#enable_at_startup = 1
 '''
@@ -69,8 +69,3 @@ hook_source = '''
 on_i = 1
 on_ft = ['snippet']
 depends = ['neosnippet-snippets']
-
-[[plugins]]
-repo = 'zchee/deoplete-go'
-on_i = 1
-on_ft = 'go'
