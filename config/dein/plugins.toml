@@ -21,18 +21,12 @@ repo = 'elzr/vim-json'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+on_ft = 'go'
 hook_add = '''
   let g:go_def_mapping_enabled = 0
   let g:go_doc_keywordprg_enabled = 0
-  let g:go_fmt_autosave=1
+  let g:go_fmt_autosave = 1
   let g:go_fmt_command = "goimports"
-'''
-
-[[plugins]]
-repo = 'glidenote/memolist.vim'
-hook_add = '''
-  let g:memolist_path = expand('$HOME/Documents/Notes')
-  let g:memolist_denite = 1
 '''
 
 [[plugins]]
@@ -60,13 +54,7 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'joshdick/onedark.vim'
-
-[[plugins]]
 repo = 'kballard/vim-fish'
-
-[[plugins]]
-repo = 'kchmck/vim-coffee-script'
 
 [[plugins]]
 repo = 'leafgarland/typescript-vim'
@@ -76,9 +64,6 @@ repo = 'mhinz/vim-mix-format'
 hook_add = '''
   let g:mix_format_on_save = 1
 '''
-
-[[plugins]]
-repo = 'mustache/vim-mustache-handlebars'
 
 [[plugins]]
 repo = 'mxw/vim-jsx'
@@ -180,15 +165,3 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'vim-jp/autofmt'
-
-[[plugins]]
-repo = 'w0rp/ale'
-hook_add = '''
-  let g:ale_linters = {
-    \ 'javascript': ['prettier', 'eslint'],
-    \ 'ruby': [],
-    \ }
-'''
