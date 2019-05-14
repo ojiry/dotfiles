@@ -53,9 +53,10 @@ repo = '/usr/local/opt/fzf'
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 hook_add = '''
-  nnoremap <Leader>b :Buffers<CR>
-  nnoremap <Leader>f :Files<CR>
-  nnoremap <Leader>t :Filetypes<CR>
+  nnoremap <Leader>fb :Buffers<CR>
+  nnoremap <Leader>fd :Files $HOME/ghq/github.com/ojiry/dotfiles<CR>
+  nnoremap <Leader>ff :Files<CR>
+  nnoremap <Leader>ft :Filetypes<CR>
 '''
 
 [[plugins]]
