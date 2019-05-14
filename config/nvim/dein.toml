@@ -23,10 +23,10 @@ repo = 'elzr/vim-json'
 repo = 'fatih/vim-go'
 on_ft = 'go'
 hook_add = '''
-  let g:go_def_mapping_enabled = 0
-  let g:go_doc_keywordprg_enabled = 0
+  let g:go_def_mode = 'gopls'
   let g:go_fmt_autosave = 1
   let g:go_fmt_command = "goimports"
+  let g:go_metalinter_autosave_enabled = ['vet']
 '''
 
 [[plugins]]
@@ -39,18 +39,23 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'honza/vim-snippets'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = '''
   let g:lightline = { 'colorscheme': 'wombat' }
 '''
 
 [[plugins]]
-repo = 'jodosha/vim-godebug'
+repo = '/usr/local/opt/fzf'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
 hook_add = '''
-  nnoremap [godebug] <Nop>
-  nmap <Space>g [godebug]
-  nmap <silent> [godebug]d :GoDebug<CR>
-  nmap <silent> [godebug]t :GoToggleBreakpoint<CR>
+  nnoremap <Leader>b :Buffers<CR>
+  nnoremap <Leader>f :Files<CR>
+  nnoremap <Leader>t :Filetypes<CR>
 '''
 
 [[plugins]]
@@ -84,12 +89,27 @@ repo = 'prabirshrestha/asyncomplete.vim'
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 [[plugins]]
-repo = 'prabirshrestha/asyncomplete-neosnippet.vim'
+repo = 'prabirshrestha/asyncomplete-ultisnips.vim'
+depends = ['asyncomplete.vim', 'ultisnips']
+hook_add = '''
+  let g:UltiSnipsExpandTrigger="<tab>"
+  let g:UltiSnipsJumpForwardTrigger="<tab>"
+  let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+  if has('python3')
+    call asyncomplete#register_source(asyncomplete#sources#ultisnips#get_source_options({
+      \ 'name': 'ultisnips',
+      \ 'whitelist': ['*'],
+      \ 'completor': function('asyncomplete#sources#ultisnips#completor'),
+      \ }))
+  endif
+'''
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 hook_add = '''
   let g:lsp_async_completion = 1
+
   if executable('gopls')
     au User lsp_setup call lsp#register_server({
       \ 'name': 'gopls',
@@ -98,6 +118,7 @@ hook_add = '''
       \ })
     autocmd BufWritePre *.go LspDocumentFormatSync
   endif
+
   if executable('solargraph')
     " gem install solargraph
     au User lsp_setup call lsp#register_server({
@@ -107,6 +128,7 @@ hook_add = '''
       \ 'whitelist': ['ruby'],
       \ })
   endif
+
   if executable('rls')
     au User lsp_setup call lsp#register_server({
       \ 'name': 'rls',
@@ -130,13 +152,7 @@ repo = 'rust-lang/rust.vim'
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
-
-[[plugins]]
-repo = 'slim-template/vim-slim'
+repo = 'SirVer/ultisnips'
 
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux'
@@ -146,9 +162,6 @@ repo = 'tpope/vim-endwise'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'tpope/vim-haml'
 
 [[plugins]]
 repo = 'tpope/vim-rails'

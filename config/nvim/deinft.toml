@@ -1,0 +1,6 @@
+[ftplugin]
+
+vim = '''
+setlocal foldmethod=indent
+setlocal shiftwidth=2 softtabstop=2
+'''
