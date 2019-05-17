@@ -156,6 +156,9 @@ repo = 'Shougo/dein.vim'
 repo = 'SirVer/ultisnips'
 
 [[plugins]]
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
 repo = 'tmux-plugins/vim-tmux'
 
 [[plugins]]
