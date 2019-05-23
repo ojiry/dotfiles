@@ -48,6 +48,18 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'janko/vim-test'
+depends = ['vim-dispatch']
+hook_add = '''
+  let g:test#strategy = 'dispatch'
+	nmap <Leader>tn :TestNearest<CR>
+	nmap <Leader>tf :TestFile<CR>
+	nmap <Leader>ts :TestSuite<CR>
+	nmap <Leader>tl :TestLast<CR>
+	nmap <Leader>tg :TestVisit<CR><Paste>
+'''
+
+[[plugins]]
 repo = '/usr/local/opt/fzf'
 
 [[plugins]]
@@ -153,6 +165,10 @@ repo = 'rust-lang/rust.vim'
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
 repo = 'SirVer/ultisnips'
 
 [[plugins]]
@@ -160,6 +176,9 @@ repo = 'thinca/vim-quickrun'
 
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux'
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
 
 [[plugins]]
 repo = 'tpope/vim-endwise'
