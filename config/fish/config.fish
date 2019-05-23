@@ -28,7 +28,10 @@ set -gx PATH $PATH $GOPATH/bin
 set -gx GO111MODULE on
 
 # fzf
-set -gx FZF_DEFAULT_OPTS --reverse
+if command -s rg > /dev/null
+  set -gx FZF_DEFAULT_COMMAND rg --files --hidden --glob "!.git"
+end
+set -gx FZF_DEFAULT_OPTS --border --height 40% --reverse
 set -gx FZF_LEGACY_KEYBINDINGS 1
 set -gx FZF_TMUX 1
 
