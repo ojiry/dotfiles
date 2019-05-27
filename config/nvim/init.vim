@@ -14,23 +14,30 @@ if filereadable(s:dein_vim)
   execute 'source' s:dein_vim
 endif
 
+filetype plugin indent on
 syntax enable
 
-filetype plugin indent on
-
 set autoindent
+set autoread
+set backspace=indent,eol,start
 set clipboard+=unnamedplus
+set display=lastline
 set encoding=utf-8
 set expandtab
+set fileformats=unix,dos,mac
+set hidden
 set hlsearch
 set ignorecase
 set incsearch
+set nobackup
 set number
-set shiftwidth=2
+set ruler
 set smartcase
 set smartindent
-set softtabstop=2
-set tabstop=2
+set splitbelow
+set splitright
+set switchbuf=useopen
+set title
 
 nnoremap <C-]> g<C-]>
 nnoremap <Leader>w :w<CR>
