@@ -25,6 +25,7 @@ set display=lastline
 set encoding=utf-8
 set expandtab
 set fileformats=unix,dos,mac
+set helplang=ja,en
 set hidden
 set hlsearch
 set ignorecase

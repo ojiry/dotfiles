@@ -8,6 +8,7 @@ set clipboard+=unnamedplus
 set display=lastline
 set encoding=utf-8
 set expandtab
+set fileencodings=utf-8,sjis,cp932,euc-jp
 set fileformats=unix,dos,mac
 set hidden
 set hlsearch
@@ -22,3 +23,6 @@ set splitbelow
 set splitright
 set switchbuf=useopen
 set title
+
+noremap j gj
+noremap k gk
