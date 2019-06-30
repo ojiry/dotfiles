@@ -40,6 +40,9 @@ set splitright
 set switchbuf=useopen
 set title
 
+noremap j gj
+noremap k gk
+
 nnoremap <C-]> g<C-]>
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :q!<CR>
