@@ -87,48 +87,18 @@ hook_add = '''
 repo = 'mxw/vim-jsx'
 
 [[plugins]]
+repo = 'neovim/nvim-lsp'
+hook_add = '''
+  call nvim_lsp#setup("gopls", {})
+  call nvim_lsp#setup("solargraph", {})
+  call nvim_lsp#setup("rls", {})
+'''
+
+[[plugins]]
 repo = 'natebosch/vim-lsc'
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
-
-[[plugins]]
-repo = 'prabirshrestha/async.vim'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-depends = ['async.vim']
-hook_add = '''
-  let g:lsp_async_completion = 1
-
-  if executable('gopls')
-    au User lsp_setup call lsp#register_server({
-      \ 'name': 'gopls',
-      \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
-      \ 'whitelist': ['go'],
-      \ })
-    autocmd BufWritePre *.go LspDocumentFormatSync
-  endif
-
-  if executable('solargraph')
-    " gem install solargraph
-    au User lsp_setup call lsp#register_server({
-      \ 'name': 'solargraph',
-      \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
-      \ 'initialization_options': {"diagnostics": "true"},
-      \ 'whitelist': ['ruby'],
-      \ })
-  endif
-
-  if executable('rls')
-    au User lsp_setup call lsp#register_server({
-      \ 'name': 'rls',
-      \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
-      \ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
-      \ 'whitelist': ['rust'],
-      \ })
-  endif
-'''
 
 [[plugins]]
 repo = 'rcmdnk/vim-markdown'
@@ -165,9 +135,6 @@ repo = 'tpope/vim-endwise'
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'tpope/vim-rails'
-
-[[plugins]]
 repo = 'tpope/vim-repeat'
 
 [[plugins]]
@@ -182,3 +149,6 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
