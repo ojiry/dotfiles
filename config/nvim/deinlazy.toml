@@ -57,6 +57,15 @@ hook_add = '''
   call nvim_lsp#setup("gopls", {})
   call nvim_lsp#setup("solargraph", {})
   call nvim_lsp#setup("rls", {})
+
+  autocmd Filetype rust,go,ruby setl omnifunc=v:lua.vim.lsp.omnifunc
+
+  nnoremap <silent> <Leader>ldc <cmd>lua vim.lsp.buf.declaration()<CR>
+  nnoremap <silent> <Leader>ldf <cmd>lua vim.lsp.buf.definition()<CR>
+  nnoremap <silent> <Leader>lh  <cmd>lua vim.lsp.buf.hover()<CR>
+  nnoremap <silent> <Leader>li  <cmd>lua vim.lsp.buf.implementation()<CR>
+  nnoremap <silent> <Leader>ls  <cmd>lua vim.lsp.buf.signature_help()<CR>
+  nnoremap <silent> <Leader>ltd <cmd>lua vim.lsp.buf.type_definition()<CR>
 '''
 
 [[plugins]]
