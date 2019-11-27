@@ -1,7 +1,4 @@
 [[plugins]]
-repo = 'cespare/vim-toml'
-
-[[plugins]]
 repo = 'cocopon/iceberg.vim'
 hook_add = '''
   colorscheme iceberg
@@ -12,31 +9,6 @@ repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
-
-[[plugins]]
-repo = 'elixir-lang/vim-elixir'
-
-[[plugins]]
-repo = 'elzr/vim-json'
-
-[[plugins]]
-repo = 'fatih/vim-go'
-on_ft = 'go'
-hook_add = '''
-  let g:go_def_mode = 'gopls'
-  let g:go_fmt_autosave = 1
-  let g:go_fmt_command = "goimports"
-  let g:go_metalinter_autosave_enabled = ['vet']
-'''
-
-[[plugins]]
-repo = 'hail2u/vim-css3-syntax'
-
-[[plugins]]
-repo = 'hashivim/vim-terraform'
-hook_add = '''
-  let g:terraform_fmt_on_save = 1
-'''
 
 [[plugins]]
 repo = 'honza/vim-snippets'
@@ -72,52 +44,11 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'kballard/vim-fish'
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'mhinz/vim-mix-format'
-hook_add = '''
-  let g:mix_format_on_save = 1
-'''
-
-[[plugins]]
-repo = 'mxw/vim-jsx'
-
-[[plugins]]
-repo = 'neovim/nvim-lsp'
-hook_add = '''
-  call nvim_lsp#setup("gopls", {})
-  call nvim_lsp#setup("solargraph", {})
-  call nvim_lsp#setup("rls", {})
-'''
-
-[[plugins]]
-repo = 'natebosch/vim-lsc'
-
-[[plugins]]
-repo = 'pangloss/vim-javascript'
-
-[[plugins]]
-repo = 'rcmdnk/vim-markdown'
-hook_add = '''
-  let g:vim_markdown_folding_disabled = 1
-'''
-
-[[plugins]]
-repo = 'rust-lang/rust.vim'
-
-[[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
-
-[[plugins]]
-repo = 'SirVer/ultisnips'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
@@ -149,6 +80,3 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'vim-jp/vimdoc-ja'
-
-[[plugins]]
-repo = 'vim-ruby/vim-ruby'

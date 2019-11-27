@@ -1,0 +1,79 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'elixir-lang/vim-elixir'
+on_ft = 'elixir'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = 'json'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = 'go'
+hook_add = '''
+  let g:go_def_mode = 'gopls'
+  let g:go_fmt_autosave = 1
+  let g:go_fmt_command = "goimports"
+  let g:go_metalinter_autosave_enabled = ['vet']
+'''
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = 'css'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = 'terraform'
+hook_add = '''
+  let g:terraform_fmt_on_save = 1
+'''
+
+[[plugins]]
+repo = 'kballard/vim-fish'
+on_ft = 'fish'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+on_ft = 'typescript'
+
+[[plugins]]
+repo = 'mhinz/vim-mix-format'
+on_ft = 'elixir'
+hook_add = '''
+  let g:mix_format_on_save = 1
+'''
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = 'javascript.jsx'
+
+[[plugins]]
+repo = 'neovim/nvim-lsp'
+on_ft = ['go', 'ruby', 'rust']
+hook_add = '''
+  call nvim_lsp#setup("gopls", {})
+  call nvim_lsp#setup("solargraph", {})
+  call nvim_lsp#setup("rls", {})
+'''
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+
+[[plugins]]
+repo = 'rcmdnk/vim-markdown'
+on_ft = 'markdown'
+hook_add = '''
+  let g:vim_markdown_folding_disabled = 1
+'''
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = 'ruby'
