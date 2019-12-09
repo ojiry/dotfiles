@@ -54,11 +54,9 @@ on_ft = 'javascript.jsx'
 repo = 'neovim/nvim-lsp'
 on_ft = ['go', 'ruby', 'rust']
 hook_add = '''
-  call nvim_lsp#setup("gopls", {})
-  call nvim_lsp#setup("solargraph", {})
-  call nvim_lsp#setup("rls", {})
-
-  autocmd Filetype rust,go,ruby setl omnifunc=v:lua.vim.lsp.omnifunc
+  lua require'nvim_lsp'.gopls.setup{}
+  lua require'nvim_lsp'.solargraph.setup{}
+  lua require'nvim_lsp'.rls.setup{}
 
   nnoremap <silent> <Leader>ldc <cmd>lua vim.lsp.buf.declaration()<CR>
   nnoremap <silent> <Leader>ldf <cmd>lua vim.lsp.buf.definition()<CR>
