@@ -53,7 +53,7 @@ on_ft = 'javascript.jsx'
 [[plugins]]
 repo = 'neovim/nvim-lsp'
 on_ft = ['go', 'ruby', 'rust']
-hook_add = '''
+hook_source = '''
   lua require'nvim_lsp'.gopls.setup{}
   lua require'nvim_lsp'.solargraph.setup{}
   lua require'nvim_lsp'.rls.setup{}
