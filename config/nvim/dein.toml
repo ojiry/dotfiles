@@ -36,6 +36,7 @@ repo = '/usr/local/opt/fzf'
 
 [[plugins]]
 repo = 'junegunn/fzf.vim'
+depends = ['fzf']
 hook_add = '''
   nnoremap <Leader>fb :Buffers<CR>
   nnoremap <Leader>fd :Files $HOME/ghq/github.com/ojiry/dotfiles<CR>
@@ -59,16 +60,13 @@ repo = 'tpope/vim-dispatch'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
 repo = 'tpope/vim-repeat'
 
 [[plugins]]
 repo = 'tpope/vim-rhubarb'
 hook_add = '''
-  nmap <silent> gb :Gbrowse<CR>
-  vmap <silent> gb :Gbrowse<CR>
+  nmap <silent> <Leader>gb :Gbrowse<CR>
+  vmap <silent> <Leader>gb :Gbrowse<CR>
 '''
 
 [[plugins]]
