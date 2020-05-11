@@ -34,6 +34,11 @@ set splitbelow
 set splitright
 set switchbuf=useopen
 set title
+set undofile
+if !isdirectory(expand("$HOME/.config/nvim/undodir"))
+  call mkdir(expand("HOME/.config/nvim/undodir"), "p")
+endif
+set undodir=$HOME/.config/nvim/undodir
 
 if filereadable(s:dein_vim)
   execute 'source' s:dein_vim

@@ -27,7 +27,12 @@ if dein#load_state(s:dein_cache_dir)
   call dein#save_state()
 endif
 
-if !has('vim_starting') && dein#check_install()
+if dein#check_install()
   call dein#install()
 endif
 
+let s:removed_plugins = dein#check_clean()
+if len(s:removed_plugins) > 0
+  call map(s:removed_plugins, "delete(v:val, 'rf')")
+  call dein#recache_runtimepath()
+endif
