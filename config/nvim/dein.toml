@@ -60,10 +60,14 @@ repo = 'tpope/vim-dispatch'
 repo = 'tpope/vim-endwise'
 
 [[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'tpope/vim-repeat'
 
 [[plugins]]
 repo = 'tpope/vim-rhubarb'
+depends = ['vim-fugitive']
 hook_add = '''
   nmap <silent> <Leader>gb :Gbrowse<CR>
   vmap <silent> <Leader>gb :Gbrowse<CR>

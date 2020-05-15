@@ -10,24 +10,17 @@ let g:mapleader      = "\<Space>"
 let g:ruby_path      = "/Users/ojiry/.anyenv/envs/rbenv/shims/ruby"
 let g:ruby_host_prog = "/Users/ojiry/.anyenv/envs/rbenv/shims/ruby"
 
-set autoindent
-set autoread
-set backspace=indent,eol,start
 set clipboard+=unnamedplus
-set display=lastline
-set encoding=utf-8
 set expandtab
 set fileformats=unix,dos,mac
+set foldmethod=indent
 set helplang=ja,en
 set hidden
-set hlsearch
 set ignorecase
-set incsearch
 set maxmempattern=2000000
 set nobackup
 set noswapfile
 set number
-set ruler
 set smartcase
 set smartindent
 set splitbelow
