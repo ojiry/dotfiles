@@ -52,11 +52,9 @@ on_ft = 'javascript.jsx'
 
 [[plugins]]
 repo = 'neovim/nvim-lsp'
-on_ft = ['go', 'ruby', 'rust']
+on_ft = ['elixir', 'go', 'ruby', 'rust']
 hook_source = '''
-  lua require'nvim_lsp'.gopls.setup{}
-  lua require'nvim_lsp'.rls.setup{}
-  lua require'nvim_lsp'.solargraph.setup{}
+  luafile ~/.config/nvim/nvim_lsp.lua
 
   nnoremap <silent> <Leader>ldc <cmd>lua vim.lsp.buf.declaration()<CR>
   nnoremap <silent> <Leader>ldf <cmd>lua vim.lsp.buf.definition()<CR>
