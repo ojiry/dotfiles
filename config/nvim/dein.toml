@@ -45,6 +45,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'roman/golden-ratio'
+
+[[plugins]]
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
