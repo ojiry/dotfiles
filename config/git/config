@@ -20,8 +20,6 @@
 	user = ojiry
 [hub]
 	protocol = https
-[init]
-	templatedir = ~/.config/git/templates
 [push]
 	default = simple
 [user]
